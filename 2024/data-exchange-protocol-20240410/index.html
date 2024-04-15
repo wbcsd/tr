@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>Technical Specifications for PCF Data Exchange (2.2.0)</title>
+  <title>Technical Specifications for PCF Data Exchange (2.2.0-20240410)</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <script data-domain="wbcsd.github.io" defer src="https://plausible.io/js/script.js"></script>
 <style data-fill-with="stylesheet">/******************************************************************************
@@ -2858,7 +2858,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">Technical Specifications for PCF Data Exchange (Version 2.2.0)</h1>
+   <h1 class="p-name no-ref" id="title">Technical Specifications for PCF Data Exchange (Version 2.2.0-20240410)</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Document, <span class="dt-updated"><span class="value-title" title="20240415">15 April 2024</span> </span></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Latest published version:
@@ -3284,7 +3285,7 @@ appropriate amount of time by sending another new request event.</strong></p>
        <p>If the recipient is requesting a specific reporting period, it should include the reporting
 period accordingly</p>
        <div class="example" id="example-055bcbee">
-        <a class="self-link" href="#example-055bcbee"></a>
+        <a class="self-link" href="#example-055bcbee"></a> 
 <pre class="language-json highlight"><c- p>{</c->
   <c- f>"productIds"</c-><c- p>:</c-> <c- p>[</c-><c- u>"urn:pathfinder:company:customcode:buyer-assigned:4321"</c-><c- p>],</c->
   <c- f>"referencePeriodStart"</c-><c- p>:</c-> <c- u>"2023-01-01T00:00:00Z"</c-><c- p>,</c->
@@ -3295,7 +3296,7 @@ period accordingly</p>
       <li data-md>
        <p>If the recipient is requesting a specific geography, it should include the geographic scope accordingly</p>
        <div class="example" id="example-698a06fb">
-        <a class="self-link" href="#example-698a06fb"></a>
+        <a class="self-link" href="#example-698a06fb"></a> 
 <pre class="language-json highlight"><c- p>{</c->
   <c- f>"productIds"</c-><c- p>:</c-> <c- p>[</c-><c- u>"urn:pathfinder:company:customcode:buyer-assigned:4321"</c-><c- p>],</c->
   <c- f>"geographicScope"</c-><c- p>:</c-> <c- p>{</c->
@@ -3436,50 +3437,50 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
     <table class="data">
      <thead>
       <tr>
-       <th>Property
-       <th>Type
-       <th>Req
-       <th>Specification
+       <th>Property 
+       <th>Type 
+       <th>Req 
+       <th>Specification 
      <tbody>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-id"><code>id</code></dfn> : <a data-link-type="dfn" href="#pfid" id="ref-for-pfid">PfId</a>
-       <td>String
-       <td>M
-       <td>The product footprint identifier, See <a href="#dt-pfid">§ 5.29 Data Type: PfId</a> for details.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-id"><code>id</code></dfn> : <a data-link-type="dfn" href="#pfid" id="ref-for-pfid">PfId</a> 
+       <td>String 
+       <td>M 
+       <td>The product footprint identifier, See <a href="#dt-pfid">§ 5.29 Data Type: PfId</a> for details. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-specversion"><code>specVersion</code></dfn>
-       <td>String
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-specversion"><code>specVersion</code></dfn> 
+       <td>String 
+       <td>M 
        <td>
-         The version of the ProductFootprint data specification with value <code>2.2.0</code>.
+         The version of the ProductFootprint data specification with value <code>2.2.0-20240410</code>. 
         <p><strong class="advisement"> Subsequent revisions will update this value according to <a href="https://semver.org/lang/en/">Semantic Versioning 2.0.0</a>.</strong></p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-precedingpfids"><code>precedingPfIds</code></dfn> : <a data-link-type="dfn" href="#pfid" id="ref-for-pfid①">PfId</a>
-       <td>Array of Strings
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-precedingpfids"><code>precedingPfIds</code></dfn> : <a data-link-type="dfn" href="#pfid" id="ref-for-pfid①">PfId</a> 
+       <td>Array of Strings 
+       <td>O 
        <td> If defined, MUST be non-empty set of preceding product footprint identifiers without duplicates.
-            See <a href="#dt-pfid">§ 5.29 Data Type: PfId</a> and <a href="#lifecycle-classification">§ 6.2 Change Definition and Classification</a> for details.
+            See <a href="#dt-pfid">§ 5.29 Data Type: PfId</a> and <a href="#lifecycle-classification">§ 6.2 Change Definition and Classification</a> for details. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-version"><code>version</code></dfn>
-       <td>Number
-       <td>M
-       <td>The version of the <code><a data-link-type="element" href="#elementdef-productfootprint" id="ref-for-elementdef-productfootprint④">ProductFootprint</a></code> with value an integer in the inclusive range of <code>0..2^31-1</code>.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-version"><code>version</code></dfn> 
+       <td>Number 
+       <td>M 
+       <td>The version of the <code><a data-link-type="element" href="#elementdef-productfootprint" id="ref-for-elementdef-productfootprint④">ProductFootprint</a></code> with value an integer in the inclusive range of <code>0..2^31-1</code>. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-created"><code>created</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime">DateTime</a>
-       <td>String
-       <td>M
-       <td>A ProductFootprint MUST include the property <code>created</code> with value the timestamp of the creation of the ProductFootprint.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-created"><code>created</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime">DateTime</a> 
+       <td>String 
+       <td>M 
+       <td>A ProductFootprint MUST include the property <code>created</code> with value the timestamp of the creation of the ProductFootprint. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-updated"><code>updated</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime①">DateTime</a>
-       <td>String
-       <td>O
-       <td>A ProductFootprint SHOULD include the property <code>updated</code> with value the timestamp of the ProductFootprint update. A ProductFootprint MUST NOT include this property if an update has never been performed. The timestamp MUST be in UTC.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-updated"><code>updated</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime①">DateTime</a> 
+       <td>String 
+       <td>O 
+       <td>A ProductFootprint SHOULD include the property <code>updated</code> with value the timestamp of the ProductFootprint update. A ProductFootprint MUST NOT include this property if an update has never been performed. The timestamp MUST be in UTC. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-status"><code>status</code></dfn>
-       <td>String
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-status"><code>status</code></dfn> 
+       <td>String 
+       <td>M 
        <td>
-         Each ProductFootprint MUST include the property <code>status</code> with value one of the following values:
+         Each ProductFootprint MUST include the property <code>status</code> with value one of the following values: 
         <dl>
          <dt data-md>Active
          <dd data-md>
@@ -3492,19 +3493,19 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
         </dl>
         <p>See <a href="#lifecycle">§ 6 Product Footprint Lifecycle</a> for details.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-statuscomment"><code>statusComment</code></dfn>
-       <td>String
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-statuscomment"><code>statusComment</code></dfn> 
+       <td>String 
+       <td>O 
        <td>
-         If defined, the value should be a message explaining the reason for the current status.
+         If defined, the value should be a message explaining the reason for the current status. 
         <p>See <a href="#lifecycle">§ 6 Product Footprint Lifecycle</a> for details.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-validityperiodstart"><code>validityPeriodStart</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime②">DateTime</a>
-       <td>String
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-validityperiodstart"><code>validityPeriodStart</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime②">DateTime</a> 
+       <td>String 
+       <td>O 
        <td>
         If defined, the start of the validity period of the ProductFootprint.
-              The <dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-validity-period"><code>validity period</code></dfn> is the time interval during which the ProductFootprint is declared as valid for use by a receiving <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient⑥">data recipient</a>.
+              The <dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-validity-period"><code>validity period</code></dfn> is the time interval during which the ProductFootprint is declared as valid for use by a receiving <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient⑥">data recipient</a>. 
         <p>The validity period is OPTIONAL defined by the properties <code><a data-link-type="element-sub" href="#element-attrdef-productfootprint-validityperiodstart" id="ref-for-element-attrdef-productfootprint-validityperiodstart">validityPeriodStart</a></code> (including) and <code><a data-link-type="element-sub" href="#element-attrdef-productfootprint-validityperiodend" id="ref-for-element-attrdef-productfootprint-validityperiodend">validityPeriodEnd</a></code> (excluding).</p>
         <p>If no validity period is specified, the ProductFootprint is valid for 3 years starting with <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-referenceperiodend" id="ref-for-element-attrdef-carbonfootprint-referenceperiodend">referencePeriodEnd</a></code>.</p>
         <p>If a validity period is to be specified, then</p>
@@ -3521,61 +3522,61 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
           </ol>
         </ol>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-validityperiodend"><code>validityPeriodEnd</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime③">DateTime</a>
-       <td>String
-       <td>O
-       <td>The end (excluding) of the valid period of the ProductFootprint. See <code><a data-link-type="element-sub" href="#element-attrdef-productfootprint-validityperiodstart" id="ref-for-element-attrdef-productfootprint-validityperiodstart③">validityPeriodStart</a></code> for further details.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-validityperiodend"><code>validityPeriodEnd</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime③">DateTime</a> 
+       <td>String 
+       <td>O 
+       <td>The end (excluding) of the valid period of the ProductFootprint. See <code><a data-link-type="element-sub" href="#element-attrdef-productfootprint-validityperiodstart" id="ref-for-element-attrdef-productfootprint-validityperiodstart③">validityPeriodStart</a></code> for further details. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-companyname"><code>companyName</code></dfn>
-       <td>String
-       <td>M
-       <td>The name of the company that is the ProductFootprint Data Owner, with value a non-empty <a data-link-type="dfn" href="#string" id="ref-for-string">String</a>.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-companyname"><code>companyName</code></dfn> 
+       <td>String 
+       <td>M 
+       <td>The name of the company that is the ProductFootprint Data Owner, with value a non-empty <a data-link-type="dfn" href="#string" id="ref-for-string">String</a>. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-companyids"><code>companyIds</code></dfn> : <a data-link-type="dfn" href="#companyidset" id="ref-for-companyidset">CompanyIdSet</a>
-       <td>Array
-       <td>M
-       <td>The non-empty set of Uniform Resource Names (<a data-link-type="biblio" href="#biblio-rfc8141" title="Uniform Resource Names (URNs)">URN</a>). Each value of this set is supposed to uniquely identify the ProductFootprint Data Owner. See <a data-link-type="dfn" href="#companyidset" id="ref-for-companyidset①">CompanyIdSet</a> for details.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-companyids"><code>companyIds</code></dfn> : <a data-link-type="dfn" href="#companyidset" id="ref-for-companyidset">CompanyIdSet</a> 
+       <td>Array 
+       <td>M 
+       <td>The non-empty set of Uniform Resource Names (<a data-link-type="biblio" href="#biblio-rfc8141" title="Uniform Resource Names (URNs)">URN</a>). Each value of this set is supposed to uniquely identify the ProductFootprint Data Owner. See <a data-link-type="dfn" href="#companyidset" id="ref-for-companyidset①">CompanyIdSet</a> for details. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-productdescription"><code>productDescription</code></dfn>
-       <td>String
-       <td>M
-       <td>The free-form description of the product plus other information related to it such as production technology or packaging.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-productdescription"><code>productDescription</code></dfn> 
+       <td>String 
+       <td>M 
+       <td>The free-form description of the product plus other information related to it such as production technology or packaging. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-productids"><code>productIds</code></dfn> : <a data-link-type="dfn" href="#productidset" id="ref-for-productidset">ProductIdSet</a>
-       <td>Array
-       <td>M
-       <td>The non-empty set of <a data-link-type="dfn" href="#productid" id="ref-for-productid">ProductIds</a>. Each of the values in the set is supposed to uniquely identify the product. What constitutes a suitable product identifier depends on the product, the conventions, contracts, and agreements between the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner⑤">Data Owner</a> and a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient⑦">Data Recipient</a> and is out of the scope of this specification.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-productids"><code>productIds</code></dfn> : <a data-link-type="dfn" href="#productidset" id="ref-for-productidset">ProductIdSet</a> 
+       <td>Array 
+       <td>M 
+       <td>The non-empty set of <a data-link-type="dfn" href="#productid" id="ref-for-productid">ProductIds</a>. Each of the values in the set is supposed to uniquely identify the product. What constitutes a suitable product identifier depends on the product, the conventions, contracts, and agreements between the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner⑤">Data Owner</a> and a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient⑦">Data Recipient</a> and is out of the scope of this specification. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-productcategorycpc"><code>productCategoryCpc</code></dfn> : <a data-link-type="dfn" href="#cpccode" id="ref-for-cpccode">CpcCode</a>
-       <td>String
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-productcategorycpc"><code>productCategoryCpc</code></dfn> : <a data-link-type="dfn" href="#cpccode" id="ref-for-cpccode">CpcCode</a> 
+       <td>String 
+       <td>M 
        <td>
         <p><strong class="advisement"> This property will become OPTIONAL in version 3 of the Technical Specifications.</strong></p>
         <p>A UN Product Classification Code (CPC) that the given product belongs to.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-productnamecompany"><code>productNameCompany</code></dfn>
-       <td>String
-       <td>M
-       <td>The non-empty trade name of the product.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-productnamecompany"><code>productNameCompany</code></dfn> 
+       <td>String 
+       <td>M 
+       <td>The non-empty trade name of the product. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-comment"><code>comment</code></dfn>
-       <td>String
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-comment"><code>comment</code></dfn> 
+       <td>String 
+       <td>M 
        <td>
         <p><strong class="advisement"> This property will become OPTIONAL in version 3 of the Technical Specifications.</strong></p>
         <p>The additional information related to the product footprint.</p>
         <p>Whereas the property <code><a data-link-type="element-sub" href="#element-attrdef-productfootprint-productdescription" id="ref-for-element-attrdef-productfootprint-productdescription">productDescription</a></code> contains product-level information, <code><a data-link-type="element-sub" href="#element-attrdef-productfootprint-comment" id="ref-for-element-attrdef-productfootprint-comment">comment</a></code> SHOULD be used for information and instructions related to the calculation of the footprint, or other information which informs the ability to interpret, to audit or to verify the Product Footprint.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-pcf"><code>pcf</code></dfn> : <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="ref-for-elementdef-carbonfootprint④">CarbonFootprint</a></code>
-       <td>Object
-       <td>M
-       <td>The carbon footprint of the given product with value conforming to the data type <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="ref-for-elementdef-carbonfootprint⑤">CarbonFootprint</a></code>.
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-pcf"><code>pcf</code></dfn> : <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="ref-for-elementdef-carbonfootprint④">CarbonFootprint</a></code> 
+       <td>Object 
+       <td>M 
+       <td>The carbon footprint of the given product with value conforming to the data type <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="ref-for-elementdef-carbonfootprint⑤">CarbonFootprint</a></code>. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-extensions"><code>extensions</code></dfn> : <code><a data-link-type="element" href="#elementdef-datamodelextension" id="ref-for-elementdef-datamodelextension①">DataModelExtension</a></code>[]
-       <td>Array
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-extensions"><code>extensions</code></dfn> : <code><a data-link-type="element" href="#elementdef-datamodelextension" id="ref-for-elementdef-datamodelextension①">DataModelExtension</a></code>[] 
+       <td>Array 
+       <td>O 
        <td>
-         If defined, 1 or more data model extensions associated with the ProductFootprint.
+         If defined, 1 or more data model extensions associated with the ProductFootprint. 
         <p><code><a data-link-type="element-sub" href="#element-attrdef-productfootprint-extensions" id="ref-for-element-attrdef-productfootprint-extensions">extensions</a></code> MUST be encoded as a non-empty JSON Array of <code><a data-link-type="element" href="#elementdef-datamodelextension" id="ref-for-elementdef-datamodelextension②">DataModelExtension</a></code> JSON objects. See <code><a data-link-type="element" href="#elementdef-datamodelextension" id="ref-for-elementdef-datamodelextension③">DataModelExtension</a></code> for details.</p>
     </table>
     <figcaption>Properties of data type ProductFootprint</figcaption>
@@ -3606,31 +3607,31 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
     <table class="data">
      <thead>
       <tr>
-       <th>Geographical Granularity / Level of aggregation
-       <th>Property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-geographyregionorsubregion" id="ref-for-element-attrdef-carbonfootprint-geographyregionorsubregion⑤">geographyRegionOrSubregion</a></code>
-       <th>Property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-geographycountry" id="ref-for-element-attrdef-carbonfootprint-geographycountry⑤">geographyCountry</a></code>
-       <th>Property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-geographycountrysubdivision" id="ref-for-element-attrdef-carbonfootprint-geographycountrysubdivision⑤">geographyCountrySubdivision</a></code>
+       <th>Geographical Granularity / Level of aggregation 
+       <th>Property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-geographyregionorsubregion" id="ref-for-element-attrdef-carbonfootprint-geographyregionorsubregion⑤">geographyRegionOrSubregion</a></code> 
+       <th>Property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-geographycountry" id="ref-for-element-attrdef-carbonfootprint-geographycountry⑤">geographyCountry</a></code> 
+       <th>Property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-geographycountrysubdivision" id="ref-for-element-attrdef-carbonfootprint-geographycountrysubdivision⑤">geographyCountrySubdivision</a></code> 
      <tbody>
       <tr>
-       <td>Global
-       <td><code>undefined</code>
-       <td><code>undefined</code>
-       <td><code>undefined</code>
+       <td>Global 
+       <td><code>undefined</code> 
+       <td><code>undefined</code> 
+       <td><code>undefined</code> 
       <tr>
-       <td>Regional or Subregional
-       <td><code>defined</code>
-       <td><code>undefined</code>
-       <td><code>undefined</code>
+       <td>Regional or Subregional 
+       <td><code>defined</code> 
+       <td><code>undefined</code> 
+       <td><code>undefined</code> 
       <tr>
-       <td>Country
-       <td><code>undefined</code>
-       <td><code>defined</code>
-       <td><code>undefined</code>
+       <td>Country 
+       <td><code>undefined</code> 
+       <td><code>defined</code> 
+       <td><code>undefined</code> 
       <tr>
-       <td>Subdivision
-       <td><code>undefined</code>
-       <td><code>undefined</code>
-       <td><code>defined</code>
+       <td>Subdivision 
+       <td><code>undefined</code> 
+       <td><code>undefined</code> 
+       <td><code>defined</code> 
     </table>
     <figcaption>Geographic scope and definedness of CarbonFootprint properties</figcaption>
    </figure>
@@ -3643,88 +3644,88 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
     <table class="data">
      <thead>
       <tr>
-       <th>Property
-       <th>Type
-       <th>Req
-       <th>Specification
+       <th>Property 
+       <th>Type 
+       <th>Req 
+       <th>Specification 
      <tbody>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-declaredunit"><code>declaredUnit</code></dfn> : <code class="idl"><a data-link-type="idl" href="#enumdef-declaredunit" id="ref-for-enumdef-declaredunit">DeclaredUnit</a></code>
-       <td>String
-       <td>M
-       <td>The unit of analysis of the product. See Data Type <code class="idl"><a data-link-type="idl" href="#enumdef-declaredunit" id="ref-for-enumdef-declaredunit①">DeclaredUnit</a></code> for further information.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-declaredunit"><code>declaredUnit</code></dfn> : <code class="idl"><a data-link-type="idl" href="#enumdef-declaredunit" id="ref-for-enumdef-declaredunit">DeclaredUnit</a></code> 
+       <td>String 
+       <td>M 
+       <td>The unit of analysis of the product. See Data Type <code class="idl"><a data-link-type="idl" href="#enumdef-declaredunit" id="ref-for-enumdef-declaredunit①">DeclaredUnit</a></code> for further information. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-unitaryproductamount"><code>unitaryProductAmount</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal">Decimal</a>
-       <td>String
-       <td>M
-       <td>The amount of <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit">Declared Units</a></code> contained within the product to which the <a href="#dt-carbonfootprint">PCF</a> is referring to. The value MUST be strictly greater than <code>0</code>.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-unitaryproductamount"><code>unitaryProductAmount</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal">Decimal</a> 
+       <td>String 
+       <td>M 
+       <td>The amount of <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit">Declared Units</a></code> contained within the product to which the <a href="#dt-carbonfootprint">PCF</a> is referring to. The value MUST be strictly greater than <code>0</code>. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-pcfexcludingbiogenic"><code>pCfExcludingBiogenic</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①">Decimal</a>
-       <td>String
-       <td>M
-       <td>The product carbon footprint of the product <i>excluding</i> biogenic CO2 emissions. The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit①">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②">decimal</a> equal to or greater than zero.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-pcfexcludingbiogenic"><code>pCfExcludingBiogenic</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①">Decimal</a> 
+       <td>String 
+       <td>M 
+       <td>The product carbon footprint of the product <i>excluding</i> biogenic CO2 emissions. The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit①">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②">decimal</a> equal to or greater than zero. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-pcfincludingbiogenic"><code>pCfIncludingBiogenic</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal③">Decimal</a>
-       <td>String
-       <td>O*
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-pcfincludingbiogenic"><code>pCfIncludingBiogenic</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal③">Decimal</a> 
+       <td>String 
+       <td>O* 
        <td>
-        If present, the product carbon footprint of the product <i>including all</i> biogenic emissions (CO2 and otherwise). The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit②">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal④">decimal</a>.
+        If present, the product carbon footprint of the product <i>including all</i> biogenic emissions (CO2 and otherwise). The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit②">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal④">decimal</a>. 
         <p class="note" role="note"><span class="marker">Note:</span> the value of this property can be less than <code>0</code> (zero).</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-fossilghgemissions"><code>fossilGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal⑤">Decimal</a>
-       <td>String
-       <td>M
-       <td>The emissions from fossil sources as a result of fuel combustion, from fugitive emissions, and from process emissions. The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit③">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal⑥">decimal</a> equal to or greater than zero.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-fossilghgemissions"><code>fossilGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal⑤">Decimal</a> 
+       <td>String 
+       <td>M 
+       <td>The emissions from fossil sources as a result of fuel combustion, from fugitive emissions, and from process emissions. The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit③">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal⑥">decimal</a> equal to or greater than zero. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-fossilcarboncontent"><code>fossilCarbonContent</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal⑦">Decimal</a>
-       <td>String
-       <td>M
-       <td>The fossil carbon content of the product (mass of carbon). The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit④">declared unit</a></code> with unit <code>kg Carbon per declared unit</code> (<code>kgC / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal⑧">decimal</a> equal to or greater than zero.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-fossilcarboncontent"><code>fossilCarbonContent</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal⑦">Decimal</a> 
+       <td>String 
+       <td>M 
+       <td>The fossil carbon content of the product (mass of carbon). The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit④">declared unit</a></code> with unit <code>kg Carbon per declared unit</code> (<code>kgC / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal⑧">decimal</a> equal to or greater than zero. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-biogeniccarboncontent"><code>biogenicCarbonContent</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal⑨">Decimal</a>
-       <td>String
-       <td>M
-       <td>The biogenic carbon content of the product (mass of carbon). The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit⑤">declared unit</a></code> with unit <code>kg Carbon per declared unit</code> (<code>kgC / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⓪">decimal</a> equal to or greater than zero.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-biogeniccarboncontent"><code>biogenicCarbonContent</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal⑨">Decimal</a> 
+       <td>String 
+       <td>M 
+       <td>The biogenic carbon content of the product (mass of carbon). The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit⑤">declared unit</a></code> with unit <code>kg Carbon per declared unit</code> (<code>kgC / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⓪">decimal</a> equal to or greater than zero. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-dlucghgemissions"><code>dLucGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①①">Decimal</a>
-       <td>String
-       <td>O*
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-dlucghgemissions"><code>dLucGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①①">Decimal</a> 
+       <td>String 
+       <td>O* 
        <td>If present, emissions resulting from recent (i.e., previous 20 years) carbon stock loss due to land conversion directly on the area of land under consideration. The value of this property MUST include direct land use change (dLUC) where available, otherwise statistical land use change (sLUC) can be used.
           The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit⑥">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①②">decimal</a> equal to or greater than zero.
-          See <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework⑧">Pathfinder Framework</a> (Appendix B) for details.
+          See <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework⑧">Pathfinder Framework</a> (Appendix B) for details. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-landmanagementghgemissions"><code>landManagementGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①③">Decimal</a>
-       <td>String
-       <td>O*
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-landmanagementghgemissions"><code>landManagementGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①③">Decimal</a> 
+       <td>String 
+       <td>O* 
        <td>If present, GHG emissions and removals associated with land-management-related changes, including non-CO2 sources.
-          The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit⑦">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①④">decimal</a>.
+          The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit⑦">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①④">decimal</a>. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-otherbiogenicghgemissions"><code>otherBiogenicGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⑤">Decimal</a>
-       <td>String
-       <td>O*
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-otherbiogenicghgemissions"><code>otherBiogenicGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⑤">Decimal</a> 
+       <td>String 
+       <td>O* 
        <td>If present, all other biogenic GHG emissions associated with product manufacturing and transport that are not included in dLUC (<code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-dlucghgemissions" id="ref-for-element-attrdef-carbonfootprint-dlucghgemissions">dLucGhgEmissions</a></code>), iLUC (<code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-ilucghgemissions" id="ref-for-element-attrdef-carbonfootprint-ilucghgemissions">iLucGhgEmissions</a></code>), and land management (<code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-landmanagementghgemissions" id="ref-for-element-attrdef-carbonfootprint-landmanagementghgemissions">landManagementGhgEmissions</a></code>).
-          The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit⑧">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⑥">decimal</a> equal to or greater than zero.
+          The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit⑧">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⑥">decimal</a> equal to or greater than zero. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-ilucghgemissions"><code>iLucGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⑦">Decimal</a>
-       <td>String
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-ilucghgemissions"><code>iLucGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⑦">Decimal</a> 
+       <td>String 
+       <td>O 
        <td>If present, emissions resulting from recent (i.e., previous 20 years) carbon stock loss due to land conversion on land not owned or controlled by the company or in its supply chain, induced by change in demand for products produced or sourced by the company.
           The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit⑨">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⑧">decimal</a> equal to or greater than zero.
-          See <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework⑨">Pathfinder Framework</a> (Appendix B) for details.
+          See <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework⑨">Pathfinder Framework</a> (Appendix B) for details. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-biogeniccarbonwithdrawal"><code>biogenicCarbonWithdrawal</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⑨">Decimal</a>
-       <td>String
-       <td>O*
-       <td>If present, the Biogenic Carbon contained in the product converted to kilogram of CO2e. The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit①⓪">declared unit</a></code> with unit <code>kgCO2e / declaredUnit</code> expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②⓪">decimal</a> equal to or <i>less than</i> zero.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-biogeniccarbonwithdrawal"><code>biogenicCarbonWithdrawal</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal①⑨">Decimal</a> 
+       <td>String 
+       <td>O* 
+       <td>If present, the Biogenic Carbon contained in the product converted to kilogram of CO2e. The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit①⓪">declared unit</a></code> with unit <code>kgCO2e / declaredUnit</code> expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②⓪">decimal</a> equal to or <i>less than</i> zero. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-aircraftghgemissions"><code>aircraftGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②①">Decimal</a>
-       <td>String
-       <td>O
-       <td>If present, the GHG emissions resulting from aircraft engine usage for the transport of the product. The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit①①">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②②">decimal</a> equal to or greater than zero.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-aircraftghgemissions"><code>aircraftGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②①">Decimal</a> 
+       <td>String 
+       <td>O 
+       <td>If present, the GHG emissions resulting from aircraft engine usage for the transport of the product. The value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit①①">declared unit</a></code> with unit <code>kg of CO2 equivalent per declared unit</code> (<code>kgCO2e / declaredUnit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②②">decimal</a> equal to or greater than zero. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-characterizationfactors"><code>characterizationFactors</code></dfn>
-       <td>String
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-characterizationfactors"><code>characterizationFactors</code></dfn> 
+       <td>String 
+       <td>M 
        <td>
         <p><strong class="advisement"> This property is DEPRECATED and only kept to ensure backwards-compatibility. It will be removed in version 3 of these Technical Specifications. It does not replace the (also mandatory) property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-ipcccharacterizationfactorssources" id="ref-for-element-attrdef-carbonfootprint-ipcccharacterizationfactorssources">ipccCharacterizationFactorsSources</a></code>.</strong></p>
         <p>The IPCC version of the GWP characterization factors used in the calculation of the PCF (see <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①⓪">Pathfinder Framework</a> Section 3.2.2). In case several characterization factors are used, indicate the earliest version used in your calculations, disregarding supplier provided PCFs. The value MUST be one of the following:</p>
@@ -3737,33 +3738,33 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
           <p>for the Fifth Assessment Report of the IPCC.</p>
         </dl>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-ipcccharacterizationfactorssources"><code>ipccCharacterizationFactorsSources</code></dfn>
-       <td>Array of Strings
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-ipcccharacterizationfactorssources"><code>ipccCharacterizationFactorsSources</code></dfn> 
+       <td>Array of Strings 
+       <td>M 
        <td>
         The characterization factors from one or more IPCC Assessment Reports used in the calculation of the PCF (see <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①①">Pathfinder Framework</a> Section 3.2.2).
               It MUST be a non-empty set of strings with the format <code>AR$VERSION$</code>, where <code>$VERSION$</code> stands for the
-              IPCC report version number and MUST be an integer.
+              IPCC report version number and MUST be an integer. 
         <p>Example values:</p>
         <div class="example" id="example-2b691a41">["AR6"]</div>
         <div class="example" id="example-e8649dee">["AR5", "AR6"]</div>
         <p><strong class="advisement"> Per the Framework, the latest available characterization factor version shall be used, i.e., <code>["AR6"]</code>. In the event this is not possible, include the set of all characterization factors used.</strong></p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-crosssectoralstandardsused"><code>crossSectoralStandardsUsed</code></dfn> : <a data-link-type="dfn" href="#crosssectoralstandardset" id="ref-for-crosssectoralstandardset">CrossSectoralStandardSet</a>
-       <td>Array
-       <td>M
-       <td>The cross-sectoral standards applied for calculating or allocating <a data-link-type="dfn" href="#ghg" id="ref-for-ghg">GHG</a> emissions
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-crosssectoralstandardsused"><code>crossSectoralStandardsUsed</code></dfn> : <a data-link-type="dfn" href="#crosssectoralstandardset" id="ref-for-crosssectoralstandardset">CrossSectoralStandardSet</a> 
+       <td>Array 
+       <td>M 
+       <td>The cross-sectoral standards applied for calculating or allocating <a data-link-type="dfn" href="#ghg" id="ref-for-ghg">GHG</a> emissions 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-productorsectorspecificrules"><code>productOrSectorSpecificRules</code></dfn> : <a data-link-type="dfn" href="#productorsectorspecificruleset" id="ref-for-productorsectorspecificruleset">ProductOrSectorSpecificRuleSet</a>
-       <td>Array
-       <td>O
-       <td>The product-specific or sector-specific rules applied for calculating or allocating GHG emissions. If no product or sector specific rules were followed, this set MUST be empty.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-productorsectorspecificrules"><code>productOrSectorSpecificRules</code></dfn> : <a data-link-type="dfn" href="#productorsectorspecificruleset" id="ref-for-productorsectorspecificruleset">ProductOrSectorSpecificRuleSet</a> 
+       <td>Array 
+       <td>O 
+       <td>The product-specific or sector-specific rules applied for calculating or allocating GHG emissions. If no product or sector specific rules were followed, this set MUST be empty. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-biogenicaccountingmethodology"><code>biogenicAccountingMethodology</code></dfn>
-       <td>String
-       <td>O*
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-biogenicaccountingmethodology"><code>biogenicAccountingMethodology</code></dfn> 
+       <td>String 
+       <td>O* 
        <td>
-        The standard followed to account for biogenic emissions and removals. If defined, the value MUST be one of the following:
+        The standard followed to account for biogenic emissions and removals. If defined, the value MUST be one of the following: 
         <dl>
          <dt data-md>PEF
          <dd data-md>
@@ -3780,121 +3781,121 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
         </dl>
         <p><strong class="advisement"> The enumeration of standards above will be evolved in future revisions. Account for this when implementing the validation of this property.</strong></p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-boundaryprocessesdescription"><code>boundaryProcessesDescription</code></dfn>
-       <td>String
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-boundaryprocessesdescription"><code>boundaryProcessesDescription</code></dfn> 
+       <td>String 
+       <td>M 
        <td>
         <p><strong class="advisement"> This property will become OPTIONAL in version 3 of the Technical Specifications.</strong></p>
         <p>The processes attributable to each lifecycle stage.</p>
         <p>Example text value:</p>
         <div class="example" id="example-392fee99"><code>Electricity consumption included as an input in the production phase</code></div>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-referenceperiodstart"><code>referencePeriodStart</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime④">DateTime</a>
-       <td>String
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-referenceperiodstart"><code>referencePeriodStart</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime④">DateTime</a> 
+       <td>String 
+       <td>M 
        <td>
         The start (including) of the time boundary for which the PCF value
               is considered to be representative. Specifically, this start date
               represents the earliest date from which activity data was collected
-              to include in the PCF calculation.
+              to include in the PCF calculation. 
         <p>See the <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①②">Pathfinder Framework</a> section 6.1.2.1 for further details.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-referenceperiodend"><code>referencePeriodEnd</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime⑤">DateTime</a>
-       <td>String
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-referenceperiodend"><code>referencePeriodEnd</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime⑤">DateTime</a> 
+       <td>String 
+       <td>M 
        <td>
         The end (excluding) of the time boundary for which the PCF value is
               considered to be representative. Specifically, this end date
               represents the latest date from which activity data was collected
-              to include in the PCF calculation.
+              to include in the PCF calculation. 
         <p>See the <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①③">Pathfinder Framework</a> section 6.1.2.1 for further details.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-geographycountrysubdivision"><code>geographyCountrySubdivision</code></dfn>
-       <td>String
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-geographycountrysubdivision"><code>geographyCountrySubdivision</code></dfn> 
+       <td>String 
        <td>
        <td>
-        If present, a ISO 3166-2 Subdivision Code. See <a href="#dt-carbonfootprint-scope">§ 5.2.1 Scope of a CarbonFootprint</a> for further details.
+        If present, a ISO 3166-2 Subdivision Code. See <a href="#dt-carbonfootprint-scope">§ 5.2.1 Scope of a CarbonFootprint</a> for further details. 
         <p>Example value for the State of New York in the United States of America:</p>
         <div class="example" id="example-41c068b2"><code>US-NY</code></div>
-         Example value for the department Yonne in France
+         Example value for the department Yonne in France 
         <div class="example" id="example-abc90ee8"><code>FR-89</code></div>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-geographycountry"><code>geographyCountry</code></dfn> : <a data-link-type="dfn" href="#iso3166cc" id="ref-for-iso3166cc">ISO3166CC</a>
-       <td>String
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-geographycountry"><code>geographyCountry</code></dfn> : <a data-link-type="dfn" href="#iso3166cc" id="ref-for-iso3166cc">ISO3166CC</a> 
+       <td>String 
        <td>
        <td>
-        If present, the value MUST conform to data type <a data-link-type="dfn" href="#iso3166cc" id="ref-for-iso3166cc①">ISO3166CC</a>. See <a href="#dt-carbonfootprint-scope">§ 5.2.1 Scope of a CarbonFootprint</a> for further details.
+        If present, the value MUST conform to data type <a data-link-type="dfn" href="#iso3166cc" id="ref-for-iso3166cc①">ISO3166CC</a>. See <a href="#dt-carbonfootprint-scope">§ 5.2.1 Scope of a CarbonFootprint</a> for further details. 
         <p>Example value in case the geographic scope is France</p>
         <div class="example" id="example-11aedd0e"><code>FR</code></div>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-geographyregionorsubregion"><code>geographyRegionOrSubregion</code></dfn> : <code class="idl"><a data-link-type="idl" href="#enumdef-regionorsubregion" id="ref-for-enumdef-regionorsubregion">RegionOrSubregion</a></code>
-       <td>String
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-geographyregionorsubregion"><code>geographyRegionOrSubregion</code></dfn> : <code class="idl"><a data-link-type="idl" href="#enumdef-regionorsubregion" id="ref-for-enumdef-regionorsubregion">RegionOrSubregion</a></code> 
+       <td>String 
        <td>
-       <td>If present, the value MUST conform to data type <code class="idl"><a data-link-type="idl" href="#enumdef-regionorsubregion" id="ref-for-enumdef-regionorsubregion①">RegionOrSubregion</a></code>. See <a href="#dt-carbonfootprint-scope">§ 5.2.1 Scope of a CarbonFootprint</a> for further details. Additionally, see the <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①④">Pathfinder Framework</a> Section 6.1.2.2.
+       <td>If present, the value MUST conform to data type <code class="idl"><a data-link-type="idl" href="#enumdef-regionorsubregion" id="ref-for-enumdef-regionorsubregion①">RegionOrSubregion</a></code>. See <a href="#dt-carbonfootprint-scope">§ 5.2.1 Scope of a CarbonFootprint</a> for further details. Additionally, see the <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①④">Pathfinder Framework</a> Section 6.1.2.2. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-secondaryemissionfactorsources"><code>secondaryEmissionFactorSources</code></dfn> : <code><a data-link-type="element" href="#elementdef-emissionfactordsset" id="ref-for-elementdef-emissionfactordsset">EmissionFactorDSSet</a></code>
-       <td>Array
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-secondaryemissionfactorsources"><code>secondaryEmissionFactorSources</code></dfn> : <code><a data-link-type="element" href="#elementdef-emissionfactordsset" id="ref-for-elementdef-emissionfactordsset">EmissionFactorDSSet</a></code> 
+       <td>Array 
+       <td>O 
        <td>
-        If secondary data was used to calculate the <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="ref-for-elementdef-carbonfootprint⑥">CarbonFootprint</a></code>, then it MUST include the property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-secondaryemissionfactorsources" id="ref-for-element-attrdef-carbonfootprint-secondaryemissionfactorsources">secondaryEmissionFactorSources</a></code> with value the emission factors used for the <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="ref-for-elementdef-carbonfootprint⑦">CarbonFootprint</a></code> calculation.
+        If secondary data was used to calculate the <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="ref-for-elementdef-carbonfootprint⑥">CarbonFootprint</a></code>, then it MUST include the property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-secondaryemissionfactorsources" id="ref-for-element-attrdef-carbonfootprint-secondaryemissionfactorsources">secondaryEmissionFactorSources</a></code> with value the emission factors used for the <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="ref-for-elementdef-carbonfootprint⑦">CarbonFootprint</a></code> calculation. 
         <p>If no secondary data is used, this property MUST BE <code>undefined</code>.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-exemptedemissionspercent"><code>exemptedEmissionsPercent</code></dfn>
-       <td>Number
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-exemptedemissionspercent"><code>exemptedEmissionsPercent</code></dfn> 
+       <td>Number 
+       <td>M 
        <td>
         <p><strong class="advisement"> The upper boundary of this property (currently <code>5</code>) will be removed in version 3 of the Technical Specifications.</strong></p>
         <p>The Percentage of emissions excluded from PCF, expressed as a decimal number between <code>0.0</code> and <code>5</code> including. See <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①⑤">Pathfinder Framework</a>.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-exemptedemissionsdescription"><code>exemptedEmissionsDescription</code></dfn>
-       <td>String
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-exemptedemissionsdescription"><code>exemptedEmissionsDescription</code></dfn> 
+       <td>String 
+       <td>M 
        <td>
         <p><strong class="advisement"> This property will become OPTIONAL in version 3 of the Technical Specifications.</strong></p>
         <p>Rationale behind exclusion of specific PCF emissions, CAN be the empty string if no emissions were excluded.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-packagingemissionsincluded"><code>packagingEmissionsIncluded</code></dfn>
-       <td>Boolean
-       <td>M
-       <td>A boolean flag indicating whether packaging emissions are included in the PCF (<code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-pcfexcludingbiogenic" id="ref-for-element-attrdef-carbonfootprint-pcfexcludingbiogenic">pCfExcludingBiogenic</a></code>, <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-pcfincludingbiogenic" id="ref-for-element-attrdef-carbonfootprint-pcfincludingbiogenic">pCfIncludingBiogenic</a></code>).
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-packagingemissionsincluded"><code>packagingEmissionsIncluded</code></dfn> 
+       <td>Boolean 
+       <td>M 
+       <td>A boolean flag indicating whether packaging emissions are included in the PCF (<code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-pcfexcludingbiogenic" id="ref-for-element-attrdef-carbonfootprint-pcfexcludingbiogenic">pCfExcludingBiogenic</a></code>, <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-pcfincludingbiogenic" id="ref-for-element-attrdef-carbonfootprint-pcfincludingbiogenic">pCfIncludingBiogenic</a></code>). 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-packagingghgemissions"><code>packagingGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②③">Decimal</a>
-       <td>String
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-packagingghgemissions"><code>packagingGhgEmissions</code></dfn> : <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②③">Decimal</a> 
+       <td>String 
+       <td>O 
        <td> Emissions resulting from the packaging of the product.
           If present, the value MUST be calculated per <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-declaredunit" id="ref-for-element-attrdef-carbonfootprint-declaredunit①②">declared unit</a></code> with unit <code>kg of CO2 equivalent per kilogram</code> (<code>kgCO2e / declared unit</code>), expressed as a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②④">decimal</a> equal to or greater than zero.
-          The value MUST NOT be defined if <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-packagingemissionsincluded" id="ref-for-element-attrdef-carbonfootprint-packagingemissionsincluded">packagingEmissionsIncluded</a></code> is <code>false</code>.
+          The value MUST NOT be defined if <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-packagingemissionsincluded" id="ref-for-element-attrdef-carbonfootprint-packagingemissionsincluded">packagingEmissionsIncluded</a></code> is <code>false</code>. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-allocationrulesdescription"><code>allocationRulesDescription</code></dfn>
-       <td>String
-       <td>O
-       <td>If present, a description of any allocation rules applied and the rationale explaining how the selected approach aligns with <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①⑥">Pathfinder Framework</a> rules (see Section 3.3.1.4).
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-allocationrulesdescription"><code>allocationRulesDescription</code></dfn> 
+       <td>String 
+       <td>O 
+       <td>If present, a description of any allocation rules applied and the rationale explaining how the selected approach aligns with <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①⑥">Pathfinder Framework</a> rules (see Section 3.3.1.4). 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-uncertaintyassessmentdescription"><code>uncertaintyAssessmentDescription</code></dfn>
-       <td>String
-       <td>O
-       <td>If present, the results, key drivers, and a short qualitative description of the uncertainty assessment.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-uncertaintyassessmentdescription"><code>uncertaintyAssessmentDescription</code></dfn> 
+       <td>String 
+       <td>O 
+       <td>If present, the results, key drivers, and a short qualitative description of the uncertainty assessment. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-primarydatashare"><code>primaryDataShare</code></dfn> : <a data-link-type="dfn" href="#percent" id="ref-for-percent">Percent</a>
-       <td>Number
-       <td>O*
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-primarydatashare"><code>primaryDataShare</code></dfn> : <a data-link-type="dfn" href="#percent" id="ref-for-percent">Percent</a> 
+       <td>Number 
+       <td>O* 
        <td>
-         The share of primary data in percent. See the <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①⑦">Pathfinder Framework</a> Sections 4.2.1 and 4.2.2, Appendix B.
+         The share of primary data in percent. See the <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①⑦">Pathfinder Framework</a> Sections 4.2.1 and 4.2.2, Appendix B. 
         <p>For reporting periods ending before the beginning of year 2025, at least property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-primarydatashare" id="ref-for-element-attrdef-carbonfootprint-primarydatashare">primaryDataShare</a></code> or propery <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-dqi" id="ref-for-element-attrdef-carbonfootprint-dqi">dqi</a></code> MUST be defined.</p>
         <p>For reporting periods including the beginning of year 2025 or after, this property MUST be defined.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-dqi"><code>dqi</code></dfn> : <code><a data-link-type="element" href="#elementdef-dataqualityindicators" id="ref-for-elementdef-dataqualityindicators">DataQualityIndicators</a></code>
-       <td>Object
-       <td>O*
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-dqi"><code>dqi</code></dfn> : <code><a data-link-type="element" href="#elementdef-dataqualityindicators" id="ref-for-elementdef-dataqualityindicators">DataQualityIndicators</a></code> 
+       <td>Object 
+       <td>O* 
        <td>
-         If present, the Data Quality Indicators (dqi) in accordance with the <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①⑧">Pathfinder Framework</a> Sections 4.2.1 and 4.2.3, Appendix B.
+         If present, the Data Quality Indicators (dqi) in accordance with the <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①⑧">Pathfinder Framework</a> Sections 4.2.1 and 4.2.3, Appendix B. 
         <p>For reporting periods ending before the beginning of year 2025, at least property <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-primarydatashare" id="ref-for-element-attrdef-carbonfootprint-primarydatashare①">primaryDataShare</a></code> or propery <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-dqi" id="ref-for-element-attrdef-carbonfootprint-dqi①">dqi</a></code> MUST be defined.</p>
         <p>For reporting periods including the beginning of year 2025 or after, this property MUST be defined.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-assurance"><code>assurance</code></dfn> : <code><a data-link-type="element" href="#elementdef-assurance" id="ref-for-elementdef-assurance">Assurance</a></code>
-       <td>Object
-       <td>O
-       <td>If present, the Assurance information in accordance with the <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①⑨">Pathfinder Framework</a>.
+       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-assurance"><code>assurance</code></dfn> : <code><a data-link-type="element" href="#elementdef-assurance" id="ref-for-elementdef-assurance">Assurance</a></code> 
+       <td>Object 
+       <td>O 
+       <td>If present, the Assurance information in accordance with the <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework①⑨">Pathfinder Framework</a>. 
     </table>
     <figcaption>Properties of data type CarbonFootprint</figcaption>
    </figure>
@@ -3906,59 +3907,59 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
     <table class="data">
      <thead>
       <tr>
-       <th>Property
-       <th>Type
-       <th>Specification
+       <th>Property 
+       <th>Type 
+       <th>Specification 
      <tbody>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-coveragepercent"><code>coveragePercent</code></dfn> : <a data-link-type="dfn" href="#percent" id="ref-for-percent①">Percent</a>
-       <td>Number
-       <td> Percentage of PCF included in the data quality assessment based on the <code>>5%</code> emissions threshold.
+       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-coveragepercent"><code>coveragePercent</code></dfn> : <a data-link-type="dfn" href="#percent" id="ref-for-percent①">Percent</a> 
+       <td>Number 
+       <td> Percentage of PCF included in the data quality assessment based on the <code>>5%</code> emissions threshold. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-technologicaldqr"><code>technologicalDQR</code></dfn>
-       <td>Number
+       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-technologicaldqr"><code>technologicalDQR</code></dfn> 
+       <td>Number 
        <td>
          Quantitative data quality rating (DQR) based on the data quality matrix (See <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework②①">Pathfinder Framework</a> Table 9),
           scoring the technological representativeness of the sources used for PCF calculation based on
-          weighted average of all inputs representing >5% of PCF emissions.
+          weighted average of all inputs representing >5% of PCF emissions. 
         <p>The value MUST be a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②⑤">decimal</a> between <code>1</code> and <code>3</code> including.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-temporaldqr"><code>temporalDQR</code></dfn>
-       <td>Number
+       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-temporaldqr"><code>temporalDQR</code></dfn> 
+       <td>Number 
        <td>
          Quantitative data quality rating (DQR) based on the data quality matrix (Table 9),
           scoring the temporal representativeness of the sources used for PCF calculation based on
-          weighted average of all inputs representing >5% of PCF emissions.
+          weighted average of all inputs representing >5% of PCF emissions. 
         <p>The value MUST be a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②⑥">decimal</a> between <code>1</code> and <code>3</code> including.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-geographicaldqr"><code>geographicalDQR</code></dfn>
-       <td>Number
+       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-geographicaldqr"><code>geographicalDQR</code></dfn> 
+       <td>Number 
        <td>
          Quantitative data quality rating (DQR) based on the data quality matrix (Table 9),
           scoring the geographical representativeness of the sources used for PCF calculation
-          based on weighted average of all inputs representing >5% of PCF emissions.
+          based on weighted average of all inputs representing >5% of PCF emissions. 
         <p>The value MUST be a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②⑦">decimal</a> between <code>1</code> and <code>3</code> including.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-completenessdqr"><code>completenessDQR</code></dfn>
-       <td>Number
+       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-completenessdqr"><code>completenessDQR</code></dfn> 
+       <td>Number 
        <td>
          Quantitative data quality rating (DQR) based on the data quality matrix (Table 9),
           scoring the completeness of the data collected for PCF calculation based on
-          weighted average of all inputs representing >5% of PCF emissions.
+          weighted average of all inputs representing >5% of PCF emissions. 
         <p>The value MUST be a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②⑧">decimal</a> between <code>1</code> and <code>3</code> including.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-reliabilitydqr"><code>reliabilityDQR</code></dfn>
-       <td>Number
+       <td><dfn class="dfn-paneled" data-dfn-for="DataQualityIndicators" data-dfn-type="element-attr" data-export id="element-attrdef-dataqualityindicators-reliabilitydqr"><code>reliabilityDQR</code></dfn> 
+       <td>Number 
        <td>
          Quantitative data quality rating (DQR) based on the data quality matrix (Table 9),
           scoring the reliability of the data collected for PCF calculation based on
-          weighted average of all inputs representing >5% of PCF emissions.
+          weighted average of all inputs representing >5% of PCF emissions. 
         <p>The value MUST be a <a data-link-type="dfn" href="#decimal" id="ref-for-decimal②⑨">decimal</a> between <code>1</code> and <code>3</code> including.</p>
     </table>
     <figcaption>Properties of data type DataQualityIndicators</figcaption>
    </figure>
    <div class="example" id="example-6621f81d">
-    <a class="self-link" href="#example-6621f81d"></a> Example value for the case that all DQIs are known but no coverage after exemption assessment performed:
+    <a class="self-link" href="#example-6621f81d"></a> Example value for the case that all DQIs are known but no coverage after exemption assessment performed: 
 <pre class="highlight"><c- p>{</c->
   <c- f>"technologicalDQR"</c-><c- p>:</c-> <c- mf>2.0</c-><c- p>,</c->
   <c- f>"temporalDQR"</c-><c- p>:</c-> <c- mf>2.0</c-><c- p>,</c->
@@ -3975,23 +3976,23 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
     <table class="data">
      <thead>
       <tr>
-       <th>Property
-       <th>Type
-       <th>Req
-       <th>Specification
+       <th>Property 
+       <th>Type 
+       <th>Req 
+       <th>Specification 
      <tbody>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-assurance"><code>assurance</code></dfn>
-       <td>Boolean
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-assurance"><code>assurance</code></dfn> 
+       <td>Boolean 
+       <td>M 
        <td> A boolean flag indicating whether the <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="ref-for-elementdef-carbonfootprint⑧">CarbonFootprint</a></code> has been
-          assured in line with <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework②③">Pathfinder Framework</a> requirements (section 5).
+          assured in line with <a data-link-type="dfn" href="#pathfinder-framework" id="ref-for-pathfinder-framework②③">Pathfinder Framework</a> requirements (section 5). 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-coverage"><code>coverage</code></dfn>
-       <td>String
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-coverage"><code>coverage</code></dfn> 
+       <td>String 
+       <td>O 
        <td>
-         Level of granularity of the emissions data assured, with value equal to
+         Level of granularity of the emissions data assured, with value equal to 
         <ul>
          <li data-md>
           <p><code>corporate level</code> for corporate level</p>
@@ -4004,11 +4005,11 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
         </ul>
         <p>This property MAY be undefined only if the kind of assurance was not performed.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-level"><code>level</code></dfn>
-       <td>String
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-level"><code>level</code></dfn> 
+       <td>String 
+       <td>O 
        <td>
-         Level of assurance applicable to the PCF, with value equal to
+         Level of assurance applicable to the PCF, with value equal to 
         <ul>
          <li data-md>
           <p><code>limited</code> for limited assurance</p>
@@ -4017,11 +4018,11 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
         </ul>
         <p>This property MAY be undefined only if the kind of assurance was not performed.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-boundary"><code>boundary</code></dfn>
-       <td>String
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-boundary"><code>boundary</code></dfn> 
+       <td>String 
+       <td>O 
        <td>
-        Boundary of the assurance, with value equal to
+        Boundary of the assurance, with value equal to 
         <ul>
          <li data-md>
           <p><code>Gate-to-Gate</code> for Gate-to-Gate</p>
@@ -4030,34 +4031,34 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
         </ul>
         <p>This property MAY be undefined only if the kind of assurance was not performed.</p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-providername"><code>providerName</code></dfn>
-       <td>String
-       <td>M
+       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-providername"><code>providerName</code></dfn> 
+       <td>String 
+       <td>M 
        <td>
-        The non-empty name of the independent third party engaged to undertake the assurance.
+        The non-empty name of the independent third party engaged to undertake the assurance. 
         <p><strong class="advisement"> Given this property was incorrectly and unintentionally published in V2 of the Technical Specifications as Mandatory, it will be reverted to Optional in version 3 of the Technical Specifications.</strong></p>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-completedat"><code>completedAt</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime⑥">DateTime</a>
-       <td>String
-       <td>O
-       <td>The date at which the assurance was completed. See data type <a data-link-type="dfn" href="#datetime" id="ref-for-datetime⑦">DateTime</a> for details.
+       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-completedat"><code>completedAt</code></dfn> : <a data-link-type="dfn" href="#datetime" id="ref-for-datetime⑥">DateTime</a> 
+       <td>String 
+       <td>O 
+       <td>The date at which the assurance was completed. See data type <a data-link-type="dfn" href="#datetime" id="ref-for-datetime⑦">DateTime</a> for details. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-standardname"><code>standardName</code></dfn>
-       <td>String
-       <td>O
-       <td> Name of the standard against which the PCF was assured.
+       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-standardname"><code>standardName</code></dfn> 
+       <td>String 
+       <td>O 
+       <td> Name of the standard against which the PCF was assured. 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-comments"><code>comments</code></dfn>
-       <td>String
-       <td>O
+       <td><dfn class="dfn-paneled" data-dfn-for="Assurance" data-dfn-type="element-attr" data-export id="element-attrdef-assurance-comments"><code>comments</code></dfn> 
+       <td>String 
+       <td>O 
        <td>
-         Any additional comments that will clarify the interpretation of the assurance.
+         Any additional comments that will clarify the interpretation of the assurance. 
         <p>This value of this property MAY be the empty string.</p>
     </table>
     <figcaption>Properties of data type Assurance</figcaption>
    </figure>
    <div class="example" id="example-4fd7c138">
-    <a class="self-link" href="#example-4fd7c138"></a> Example value for the case that 42% of the product’s overall GHG emissions covered by the data quality assessment:
+    <a class="self-link" href="#example-4fd7c138"></a> Example value for the case that 42% of the product’s overall GHG emissions covered by the data quality assessment: 
 <pre class="highlight"><c- p>{</c->
   <c- f>"assurance"</c-><c- p>:</c-> <c- kc>true</c-><c- p>,</c->
   <c- f>"coverage"</c-><c- p>:</c-> <c- u>"PCF system"</c-><c- p>,</c->
@@ -4075,7 +4076,7 @@ JSON Representation of Data Model Extensions
 (<a href="https://wbcsd.github.io/data-model-extensions/spec/#instantiation">§ 5. JSON Representation of a Data Model Extension</a>).</p>
    <p>See <a data-link-type="biblio" href="#biblio-data-model-extensions" title="Technical Specification for Data Model Extensions">[DATA-MODEL-EXTENSIONS]</a> for technical details and <a data-link-type="biblio" href="#biblio-extensions-guidance" title="Guidance and Criteria Catalog for Pathfinder Data Model Extensions">[EXTENSIONS-GUIDANCE]</a> for data model extension guidance.</p>
    <div class="example" id="example-0cbe0af6">
-    <a class="self-link" href="#example-0cbe0af6"></a> Example imaginary Data Model Extension for encoding shipment-related data, encoded in JSON:
+    <a class="self-link" href="#example-0cbe0af6"></a> Example imaginary Data Model Extension for encoding shipment-related data, encoded in JSON: 
 <pre class="highlight"><c- p>{</c->
   <c- f>"specVersion"</c-><c- p>:</c-> <c- u>"2.0.0"</c-><c- p>,</c->
   <c- f>"dataSchema"</c-><c- p>:</c-> <c- u>"https://catalog.carbon-transparency.com/shipment/1.0.0/data-model.json"</c-><c- p>,</c->
@@ -4175,7 +4176,7 @@ JSON Representation of Data Model Extensions
      <p>The non-empty version of the emission factor database.</p>
    </dl>
    <div class="example" id="example-01b8143c">
-    <a class="self-link" href="#example-01b8143c"></a> Example encoding of a <code><a data-link-type="element" href="#elementdef-emissionfactords" id="ref-for-elementdef-emissionfactords②">EmissionFactorDS</a></code> in JSON:
+    <a class="self-link" href="#example-01b8143c"></a> Example encoding of a <code><a data-link-type="element" href="#elementdef-emissionfactords" id="ref-for-elementdef-emissionfactords②">EmissionFactorDS</a></code> in JSON: 
 <pre class="language-json highlight"><c- p>{</c->
   <c- f>"name"</c-><c- p>:</c-> <c- u>"ecoinvent"</c-><c- p>,</c->
   <c- f>"version"</c-><c- p>:</c-> <c- u>"3.9.1"</c->
@@ -4291,7 +4292,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient⑧">
 </pre>
    <p>where <code>$custom-company-code$</code> stands for the custom company code assigned by the <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient⑨">data recipient</a>.</p>
    <div class="example" id="example-ffe7a9aa">
-    <a class="self-link" href="#example-ffe7a9aa"></a> A data owner got assigned the custom vendor code <code>4321</code> by a buyer, the value of the CompanyId is then:
+    <a class="self-link" href="#example-ffe7a9aa"></a> A data owner got assigned the custom vendor code <code>4321</code> by a buyer, the value of the CompanyId is then: 
     <p><code>urn:pathfinder:company:customcode:buyer-assigned:4321</code>.</p>
    </div>
    <p>If the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner⑧">data owner</a> (<a data-link-type="dfn" href="#sca" id="ref-for-sca③">SCA</a>) wishes to use its own custom company code known by
@@ -4300,7 +4301,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
 </pre>
    <p>where <code>$custom-company-code$</code> stands for the custom company code set by the <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①①">data recipient</a>.</p>
    <div class="example" id="example-e99f8f76">
-    <a class="self-link" href="#example-e99f8f76"></a> A data owner uses as custom vendor code <code>6789</code> which is known to a buyer, the value of the CompanyId is then:
+    <a class="self-link" href="#example-e99f8f76"></a> A data owner uses as custom vendor code <code>6789</code> which is known to a buyer, the value of the CompanyId is then: 
     <p><code>urn:pathfinder:company:customcode:vendor-assigned:6789</code>.</p>
    </div>
    <h3 class="heading settled" data-level="5.20" id="dt-productidset"><span class="secno">5.20. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="productidset">ProductIdSet</dfn></span><a class="self-link" href="#dt-productidset"></a></h3>
@@ -4316,7 +4317,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
 </pre>
    <p>where <code>$CUSTOM-PRODUCT-CODE$</code> stands for the custom product code assigned by the <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①③">data recipient</a>.</p>
    <div class="example" id="example-f2359e24">
-    <a class="self-link" href="#example-f2359e24"></a> A data owner got assigned the custom product code <code>1234</code> for one of its products by a buyer, the value of the ProductId is then:
+    <a class="self-link" href="#example-f2359e24"></a> A data owner got assigned the custom product code <code>1234</code> for one of its products by a buyer, the value of the ProductId is then: 
     <p><code>urn:pathfinder:product:customcode:buyer-assigned:1234</code>.</p>
    </div>
    <p>If the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①②">data owner</a> (<a data-link-type="dfn" href="#sca" id="ref-for-sca⑤">SCA</a>) wishes to use its own custom product code known by
@@ -4325,7 +4326,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
 </pre>
    <p>where <code>$CUSTOM-PRODUCT-CODE$</code> stands for the custom product code set by the <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⑤">data recipient</a>.</p>
    <div class="example" id="example-459f150a">
-    <a class="self-link" href="#example-459f150a"></a> A data owner uses as custom product code <code>8765</code> which is known to a buyer, the value of the ProductId is then:
+    <a class="self-link" href="#example-459f150a"></a> A data owner uses as custom product code <code>8765</code> which is known to a buyer, the value of the ProductId is then: 
     <p><code>urn:pathfinder:product:customcode:vendor-assigned:8765</code>.</p>
    </div>
    <h4 class="heading settled" data-level="5.21.2" id="dt-productid-cas"><span class="secno">5.21.2. </span><span class="content">ProductId based on CAS Registry Numbers</span><a class="self-link" href="#dt-productid-cas"></a></h4>
@@ -4334,7 +4335,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
 </pre>
    <p>where <code>$CAS-REGISTRY-NUMBER$</code> stands for a CAS Registry Number.</p>
    <div class="example" id="example-341c78c5">
-    <a class="self-link" href="#example-341c78c5"></a> Example ProductId encoding of ethanol with the CAS Registry Number <code>64-17-5</code>:
+    <a class="self-link" href="#example-341c78c5"></a> Example ProductId encoding of ethanol with the CAS Registry Number <code>64-17-5</code>: 
     <p><code>urn:pathfinder:product:id:cas:64-17-5</code></p>
    </div>
    <h4 class="heading settled" data-level="5.21.3" id="dt-productid-inchicode"><span class="secno">5.21.3. </span><span class="content">ProductId based on IUPAC InChi Code</span><a class="self-link" href="#dt-productid-inchicode"></a></h4>
@@ -4343,7 +4344,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
 </pre>
    <p>where <code>$INCHI-CODE$</code> stands for a IUPAC InChi Code.</p>
    <div class="example" id="example-ab9dc084">
-    <a class="self-link" href="#example-ab9dc084"></a> Example ProductId encoding of Aspirin with the IUPAC InChi Code
+    <a class="self-link" href="#example-ab9dc084"></a> Example ProductId encoding of Aspirin with the IUPAC InChi Code 
     <p><code>1S/C9H8O4/c1-6(10)13-8-5-3-2-4-7(8)9(11)12/h2-5H,1H3,(H,11,12)</code>:</p>
 <pre>urn:pathfinder:product:id:iupac-inchi:1S%2FC9H8O4%2Fc1-6%2810%2913-8-5-3-2-4-7%288%299%2811%2912%2Fh2-5H%2C1H3%2C%28H%2C11%2C12%29
 </pre>
@@ -4360,7 +4361,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
    <p>A Decimal number in the range of and including <code>0</code> and <code>100</code>.</p>
    <p>Example values:</p>
    <div class="example" id="example-e31a8742">
-    <a class="self-link" href="#example-e31a8742"></a>
+    <a class="self-link" href="#example-e31a8742"></a> 
     <ul>
      <li data-md>
       <p><code>100</code></p>
@@ -4378,7 +4379,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
    <p>A positive, non-zero Decimal.</p>
    <p>Example values:</p>
    <div class="example" id="example-7776d61c">
-    <a class="self-link" href="#example-7776d61c"></a>
+    <a class="self-link" href="#example-7776d61c"></a> 
     <ul>
      <li data-md>
       <p>0.123</p>
@@ -4406,7 +4407,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
    <p>A dotted-decimal number.</p>
    <p>Example values:</p>
    <div class="example" id="example-73d4ac86">
-    <a class="self-link" href="#example-73d4ac86"></a>
+    <a class="self-link" href="#example-73d4ac86"></a> 
     <ul>
      <li data-md>
       <p><code>10</code></p>
@@ -4424,7 +4425,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
    <p>Each PfId MUST be encoded as a JSON String.</p>
    <p>Example JSON string value:</p>
    <div class="example" id="example-3ff44a83">
-    <a class="self-link" href="#example-3ff44a83"></a>
+    <a class="self-link" href="#example-3ff44a83"></a> 
 <pre class="language-json highlight"><c- u>"f4b1225a-bd44-4c8e-861d-079e4e1dfd69"</c->
 </pre>
    </div>
@@ -4467,7 +4468,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
      <p>Additionally, a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner②①">data owner</a> CAN decide to handle a <a data-link-type="dfn" href="#minor-change" id="ref-for-minor-change⑧">minor change</a> as a <a data-link-type="dfn" href="#major-change" id="ref-for-major-change③">major change</a> (see <a href="#lifecycle-major-changes">§ 6.4 New ProductFootprint creation from major changes</a> for further details).</p>
    </dl>
    <div class="example" id="example-0c42fe42">
-    <a class="self-link" href="#example-0c42fe42"></a> Major change example: a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner②②">data owner</a> decides to publish Product Footprints with a sub-regional geographical granularity instead of a Product Footprint with scope <code>Global</code> (<a href="#dt-carbonfootprint-scope">§ 5.2.1 Scope of a CarbonFootprint</a>).
+    <a class="self-link" href="#example-0c42fe42"></a> Major change example: a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner②②">data owner</a> decides to publish Product Footprints with a sub-regional geographical granularity instead of a Product Footprint with scope <code>Global</code> (<a href="#dt-carbonfootprint-scope">§ 5.2.1 Scope of a CarbonFootprint</a>). 
     <p>The <a data-link-type="dfn" href="#host-system" id="ref-for-host-system④">host system</a> of the data owner then performs the following logical steps:</p>
     <ol>
      <li data-md>
@@ -4479,7 +4480,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
     </ol>
    </div>
    <div class="example" id="example-c190e38f">
-    <a class="self-link" href="#example-c190e38f"></a> Minor change example: a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner②③">data owner</a> received an updated upstream Product Footprint which materially updates the <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-fossilghgemissions" id="ref-for-element-attrdef-carbonfootprint-fossilghgemissions①">fossilGhgEmissions</a></code> of one of its own Product Footprints.
+    <a class="self-link" href="#example-c190e38f"></a> Minor change example: a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner②③">data owner</a> received an updated upstream Product Footprint which materially updates the <code><a data-link-type="element-sub" href="#element-attrdef-carbonfootprint-fossilghgemissions" id="ref-for-element-attrdef-carbonfootprint-fossilghgemissions①">fossilGhgEmissions</a></code> of one of its own Product Footprints. 
     <p>The <a data-link-type="dfn" href="#host-system" id="ref-for-host-system⑤">host system</a> of the data owner then performs the following logical steps:</p>
     <ol>
      <li data-md>
@@ -4569,9 +4570,9 @@ Additionally, the value of <code><a data-link-type="element-sub" href="#element-
     <li data-md>
      <p>data recipient retrieving the <a data-link-type="dfn" href="#access-token" id="ref-for-access-token">access token</a> from <a data-link-type="dfn" href="#authendpoint" id="ref-for-authendpoint②">AuthEndpoint</a> (see <a href="#api-action-auth-request">§ 7.5.1 Request Syntax (HTTP/1.1)</a>).</p>
    </ol>
-   <p class="note" role="note"><span class="marker">Note:</span> The <a data-link-type="dfn" href="#authentication-flow" id="ref-for-authentication-flow">authentication flow</a> is defined such that a Version 2.2.0 data recipient can authenticate against host versions irrespective of their support for OpenID-Connect.</p>
+   <p class="note" role="note"><span class="marker">Note:</span> The <a data-link-type="dfn" href="#authentication-flow" id="ref-for-authentication-flow">authentication flow</a> is defined such that a Version 2.2.0-20240410 data recipient can authenticate against host versions irrespective of their support for OpenID-Connect.</p>
    <figure>
-     <img height="100%" src="diagrams/authentication-flow.svg" width="100%">
+     <img height="100%" src="diagrams/authentication-flow.svg" width="100%"> 
     <figcaption>Authentication flow.</figcaption>
    </figure>
    <p>Once the <a data-link-type="dfn" href="#authentication-flow" id="ref-for-authentication-flow①">authentication flow</a> is complete, the <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient②⑤">data recipient</a> can call the other actions of the <a data-link-type="dfn" href="#host-system" id="ref-for-host-system⑧">host system</a></p>
@@ -4591,7 +4592,7 @@ value for a <a data-link-type="biblio" href="#biblio-rfc6750" title="The OAuth 2
    <p>A <a data-link-type="dfn" href="#host-system" id="ref-for-host-system①③">host system</a> CAN offer the <a data-link-type="dfn" href="#openid-provider-configuration-document" id="ref-for-openid-provider-configuration-document④">OpenId Provider Configuration Document</a> and <a data-link-type="dfn" href="#action-authenticate" id="ref-for-action-authenticate③">Action Authenticate</a> under <a data-link-type="dfn" href="#authhostname" id="ref-for-authhostname①">AuthHostname</a> and <a data-link-type="dfn" href="#authsubpath" id="ref-for-authsubpath①">AuthSubpath</a> which are different from <a data-link-type="dfn" href="#hostname" id="ref-for-hostname①">Hostname</a> and <a data-link-type="dfn" href="#subpath" id="ref-for-subpath①">Subpath</a>.</p>
    <p>If a host system does not offer an <a data-link-type="dfn" href="#openid-provider-configuration-document" id="ref-for-openid-provider-configuration-document⑤">OpenId Provider Configuration Document</a>, <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient②⑥">data recipients</a> MUST assume that <a data-link-type="dfn" href="#action-authenticate" id="ref-for-action-authenticate④">Action Authenticate</a> is offered under <a data-link-type="dfn" href="#authhostname" id="ref-for-authhostname②">AuthHostname</a><code>/</code><a data-link-type="dfn" href="#authsubpath" id="ref-for-authsubpath②">AuthSubpath</a><code>/auth/token</code> (see <a href="#api-auth">§ 7.3 Authentication Flow</a>).</p>
    <div class="example" id="example-bd33d363">
-    <a class="self-link" href="#example-bd33d363"></a> The host system’s DNS domain name is <code>example.org</code> and the subpath is <code>/wbcsd</code> whereas the ID management system uses a <code>id.example.org</code> domain with an empty subpath. The URIs would then be:
+    <a class="self-link" href="#example-bd33d363"></a> The host system’s DNS domain name is <code>example.org</code> and the subpath is <code>/wbcsd</code> whereas the ID management system uses a <code>id.example.org</code> domain with an empty subpath. The URIs would then be: 
     <ul>
      <li data-md>
       <p>for <a data-link-type="dfn" href="#openid-provider-configuration-document" id="ref-for-openid-provider-configuration-document⑥">OpenId Provider Configuration Document</a>: <a href="https://example.org/wbcsd/.well-known/openid-configuration">https://id.example.org/.well-known/openid-configuration</a></p>
@@ -4670,7 +4671,7 @@ content-length: <a data-link-type="dfn" href="#contentlength" id="ref-for-conten
    <h5 class="heading settled" data-level="7.5.2.1" id="api-action-auth-response-success"><span class="secno">7.5.2.1. </span><span class="content">Example Successful Response</span><a class="self-link" href="#api-action-auth-response-success"></a></h5>
    <p>Example <a data-link-type="dfn" href="#authresponsebody" id="ref-for-authresponsebody①">AuthResponseBody</a> for a successful authenticate call:</p>
    <div class="example" id="example-3b3eb2d0">
-    <a class="self-link" href="#example-3b3eb2d0"></a>
+    <a class="self-link" href="#example-3b3eb2d0"></a> 
 <pre class="highlight"><c- p>{</c->
   <c- f>"access_token"</c-><c- p>:</c-> <c- u>"..."</c-><c- p>,</c->
   <c- f>"token_type"</c-><c- p>:</c-> <c- u>"bearer"</c->
@@ -4680,7 +4681,7 @@ content-length: <a data-link-type="dfn" href="#contentlength" id="ref-for-conten
    <h5 class="heading settled" data-level="7.5.2.2" id="api-action-auth-response-no-success"><span class="secno">7.5.2.2. </span><span class="content">Example Error Response</span><a class="self-link" href="#api-action-auth-response-no-success"></a></h5>
    <p>Example HTTP call, for instance generated because username or password did not match:</p>
    <div class="example" id="example-d9a29d48">
-    <a class="self-link" href="#example-d9a29d48"></a>
+    <a class="self-link" href="#example-d9a29d48"></a> 
 <pre class="highlight"><c- kr>HTTP</c-><c- o>/</c-><c- m>1.1</c-> <c- m>400</c-> <c- ne>Bad Request</c->
 <c- e>date</c-><c- o>:</c-> <c- l>Mon, 23 Oct 2023 19:33:16 GMT</c->
 <c- e>content-type</c-><c- o>:</c-> <c- l>application/json</c->
@@ -4793,19 +4794,19 @@ content-length: <a data-link-type="dfn" href="#contentlength" id="ref-for-conten
        <p>Lambda operator <code>any</code> on collection-valued properties <code><a data-link-type="element-sub" href="#element-attrdef-productfootprint-companyids" id="ref-for-element-attrdef-productfootprint-companyids">companyIds</a></code>, <code><a data-link-type="element-sub" href="#element-attrdef-productfootprint-productids" id="ref-for-element-attrdef-productfootprint-productids">productIds</a></code>. The expression argument of the operator MUST only include the <code>eq</code> operator.</p>
      </ul>
      <div class="example" id="example-980bf04a">
-      <a class="self-link" href="#example-980bf04a"></a> Get footprints with CPC code "3342":
+      <a class="self-link" href="#example-980bf04a"></a> Get footprints with CPC code "3342": 
       <p><code>$filter=productCategoryCpc eq '3342'</code></p>
      </div>
      <div class="example" id="example-2132ddf8">
-      <a class="self-link" href="#example-2132ddf8"></a> Get footprints scoped for country:
+      <a class="self-link" href="#example-2132ddf8"></a> Get footprints scoped for country: 
       <p><code>$filter=pcf/geographyCountry eq 'DE'</code></p>
      </div>
      <div class="example" id="example-filter-period">
-      <a class="self-link" href="#example-filter-period"></a> Get footprints for 2023 reporting period:
+      <a class="self-link" href="#example-filter-period"></a> Get footprints for 2023 reporting period: 
       <p><code>$filter=(pcf/referencePeriodStart ge '2023-01-01T00:00:00.000Z') and (pcf/referencePeriodEnd lt '2024-01-01T00:00:00.000Z') </code></p>
      </div>
      <div class="example" id="example-7437c625">
-      <a class="self-link" href="#example-7437c625"></a> Get footprints for a specific product:
+      <a class="self-link" href="#example-7437c625"></a> Get footprints for a specific product: 
       <p><code>$filter=productIds/any(productId:(productId eq 'urn:...'))</code></p>
      </div>
     <dt data-md><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="limit">Limit</dfn>
@@ -5021,7 +5022,7 @@ but not by geography), etc.</p>
     <dd data-md>
      <p>A JSON object with a subset of <code><a data-link-type="element" href="#elementdef-productfootprint" id="ref-for-elementdef-productfootprint②⑦">ProductFootprint</a></code> properties, <strong>including nested properties</strong>. It is RECOMMENDED to include at least the <a data-link-type="dfn" href="#productid" id="ref-for-productid⑤">ProductIds</a> in the PF Request Event request body.</p>
      <div class="example" id="example-77ea5110">
-      <a class="self-link" href="#example-77ea5110"></a> Example <code>ProductFootprintFragment</code> for querying a PF via <strong>productId</strong> in the PF Request Event request body
+      <a class="self-link" href="#example-77ea5110"></a> Example <code>ProductFootprintFragment</code> for querying a PF via <strong>productId</strong> in the PF Request Event request body 
 <pre class="language-json highlight"><c- p>{</c->
   <c- f>"productIds"</c-><c- p>:</c-> <c- p>[</c->
       <c- u>"urn:gtin:4712345060507"</c->
@@ -5108,7 +5109,7 @@ the cause of the error, and so that potentially <a data-link-type="dfn" href="#h
    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="error-response-code">error response code</dfn> is a value from column <code>Error Response Code</code> from the table below.</p>
    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="error-message">error message</dfn> is a human-readable error description. Example values are in column <code>Example Message</code> in the table below.</p>
    <div class="example" id="example-644d5a66">
-    <a class="self-link" href="#example-644d5a66"></a> Example <a data-link-type="dfn" href="#accessdenied" id="ref-for-accessdenied②">AccessDenied</a> <a data-link-type="dfn" href="#error-response" id="ref-for-error-response⑨">error response</a>:
+    <a class="self-link" href="#example-644d5a66"></a> Example <a data-link-type="dfn" href="#accessdenied" id="ref-for-accessdenied②">AccessDenied</a> <a data-link-type="dfn" href="#error-response" id="ref-for-error-response⑨">error response</a>: 
 <pre class="include-code highlight"><c- p>{</c->
   <c- f>"message"</c-><c- p>:</c-> <c- u>"Access Denied"</c-><c- p>,</c->
   <c- f>"code"</c-><c- p>:</c-> <c- u>"AccessDenied"</c->
@@ -5120,34 +5121,34 @@ the cause of the error, and so that potentially <a data-link-type="dfn" href="#h
     <table class="data">
      <thead>
       <tr>
-       <th><code>Error Response Code</code>
-       <th><code>Example Message</code>
-       <th><code>HTTP Status Code</code>
+       <th><code>Error Response Code</code> 
+       <th><code>Example Message</code> 
+       <th><code>HTTP Status Code</code> 
      <tbody>
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="accessdenied">AccessDenied</dfn>
-       <td>Access denied
-       <td>403
+       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="accessdenied">AccessDenied</dfn> 
+       <td>Access denied 
+       <td>403 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="badrequest">BadRequest</dfn>
-       <td>Bad Request
-       <td>400
+       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="badrequest">BadRequest</dfn> 
+       <td>Bad Request 
+       <td>400 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="nosuchfootprint">NoSuchFootprint</dfn>
-       <td>The specified footprint does not exist.
-       <td>404
+       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="nosuchfootprint">NoSuchFootprint</dfn> 
+       <td>The specified footprint does not exist. 
+       <td>404 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="notimplemented">NotImplemented</dfn>
-       <td>The specified Action or header you provided implies functionality that is not implemented
-       <td>400
+       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="notimplemented">NotImplemented</dfn> 
+       <td>The specified Action or header you provided implies functionality that is not implemented 
+       <td>400 
       <tr>
-       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="tokenexpired">TokenExpired</dfn>
-       <td>The specified access token has expired
-       <td>401
+       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="tokenexpired">TokenExpired</dfn> 
+       <td>The specified access token has expired 
+       <td>401 
       <tr>
-       <td>InternalError
-       <td>An internal or unexpected error has occurred
-       <td>500
+       <td>InternalError 
+       <td>An internal or unexpected error has occurred 
+       <td>500 
     </table>
     <figcaption>Listing of error codes and their related error response codes.</figcaption>
    </figure>
@@ -5157,7 +5158,7 @@ the cause of the error, and so that potentially <a data-link-type="dfn" href="#h
    <div class="note" role="note">Non-normative</div>
    <h4 class="heading settled" data-level="7.10.1" id="api-action-list-example"><span class="secno">7.10.1. </span><span class="content">Example Action ListFootprints request and response</span><a class="self-link" href="#api-action-list-example"></a></h4>
    <div class="example" id="example-3141ab0f">
-    <a class="self-link" href="#example-3141ab0f"></a>
+    <a class="self-link" href="#example-3141ab0f"></a> 
     <p>Example request:</p>
 <pre class="highlight"><c- nf>GET</c-> <c- nn>/2/footprints?limit=10</c-> <c- kr>HTTP</c-><c- o>/</c-><c- m>2</c->
 <c- e>host</c-><c- o>:</c-> <c- l>api.pathfinder.sine.dev</c->
@@ -5262,7 +5263,7 @@ the cause of the error, and so that potentially <a data-link-type="dfn" href="#h
    </div>
    <h4 class="heading settled" data-level="7.10.2" id="api-error-response-example"><span class="secno">7.10.2. </span><span class="content">Example Error Response</span><a class="self-link" href="#api-error-response-example"></a></h4>
    <div class="example" id="example-f81277c7">
-    <a class="self-link" href="#example-f81277c7"></a>
+    <a class="self-link" href="#example-f81277c7"></a> 
     <p>Example request:</p>
 <pre class="highlight"><c- nf>GET</c-> <c- nn>/2/footprints</c-> <c- kr>HTTP</c-><c- o>/</c-><c- m>2</c->
 <c- e>host</c-><c- o>:</c-> <c- l>api.pathfinder.sine.dev</c->
@@ -5284,7 +5285,7 @@ the cause of the error, and so that potentially <a data-link-type="dfn" href="#h
    <h4 class="heading settled" data-level="7.10.3" id="api-action-events-example"><span class="secno">7.10.3. </span><span class="content">Example PF Request and Response Events</span><a class="self-link" href="#api-action-events-example"></a></h4>
    <p><strong>Example PF Request Event:</strong></p>
    <div class="example" id="example-22190e77">
-    <a class="self-link" href="#example-22190e77"></a>
+    <a class="self-link" href="#example-22190e77"></a> 
 <pre class="highlight"><c- nf>POST</c-> <c- nn>Subpath/2/events</c-> <c- kr>HTTP</c-><c- o>/</c-><c- m>1.1</c->
 <c- e>host</c-><c- o>:</c-> <c- l>api.pathfinder.sine.dev</c->
 <c- e>authorization</c-><c- o>:</c-> <c- l>Bearer [BearerToken]</c->
@@ -5312,9 +5313,9 @@ the cause of the error, and so that potentially <a data-link-type="dfn" href="#h
 <c- e>content-length</c-><c- o>:</c-> <c- l>0</c->
 </pre>
    </div>
-    <strong>Example PF Response Event:</strong>
+    <strong>Example PF Response Event:</strong> 
    <div class="example" id="example-e4552dc3">
-    <a class="self-link" href="#example-e4552dc3"></a>
+    <a class="self-link" href="#example-e4552dc3"></a> 
 <pre class="highlight"><c- nf>POST</c-> <c- nn>Subpath/2/events</c-> <c- kr>HTTP</c-><c- o>/</c-><c- m>1.1</c->
 <c- e>host</c-><c- o>:</c-> <c- l>api.pathfinder.sine.dev</c->
 <c- e>authorization</c-><c- o>:</c-> <c- l>Bearer [BearerToken]</c->
@@ -5417,7 +5418,7 @@ the cause of the error, and so that potentially <a data-link-type="dfn" href="#h
    </div>
    <h4 class="heading settled" data-level="7.10.4" id="api-action-get-example"><span class="secno">7.10.4. </span><span class="content">Example Action GetFootprint request and response</span><a class="self-link" href="#api-action-get-example"></a></h4>
    <div class="example" id="example-81e09e60">
-    <a class="self-link" href="#example-81e09e60"></a>
+    <a class="self-link" href="#example-81e09e60"></a> 
     <p>Example request:</p>
 <pre class="highlight"><c- nf>GET</c-> <c- nn>/2/footprint/d9be4477-e351-45b3-acd9-e1da05e6f633</c-> <c- kr>HTTP</c-><c- o>/</c-><c- m>2</c->
 <c- e>host</c-><c- o>:</c-> <c- l>api.pathfinder.sine.dev</c->
@@ -5551,18 +5552,18 @@ d.         Share (subject to compliance with Section 3.2) any Separate Derivativ
    </ol>
    <p>3.1       If User Shares any Reproduction under Section 2.1(c), User must retain, and not change, obstruct, or obscure in such Reproduction, the following information:</p>
    <p>(i)         identification of Licensor as the owner or rightholder of the Licensed
-              Rights in the Licensed Material, and the name of any creator(s) of the
+              Rights in the Licensed Material, and the name of any creator(s) of the 
               Licensed Material identified herein;
 (ii)        the copyright notice in this Licensed Material;
 (iii)       the full text of this License.</p>
    <p>3.2       If User Shares a Separate Derivative under Section 2.1(d), User must include a written notice in such Separate Derivative reasonably visible to any user of such Separate Derivative that:</p>
    <p>(i)         identifies the Licensed Material and such Separate Derivative as a
-              derivative work or otherwise derived from, based on, or including or
+              derivative work or otherwise derived from, based on, or including or 
               using the Licensed Material;
-(ii)        identifies Licensor as the owner or rightholder of the Licensed Rights
-              in the Licensed Material, and the name of any creator(s) of the Licensed
+(ii)        identifies Licensor as the owner or rightholder of the Licensed Rights 
+              in the Licensed Material, and the name of any creator(s) of the Licensed 
               Materials identified herein;
-(iii)       reproduces exactly and in full Section 5 (Disclaimer of Warranties and
+(iii)       reproduces exactly and in full Section 5 (Disclaimer of Warranties and 
               Limitation of Liability).</p>
    <p>3.3       Upon Licensor’s request, User shall remove or modify any of the information required by Section 3.1 or Section 3.2, as applicable, with regard to any Reproduction or Separate Derivative Shared after such request as reasonably practicable.</p>
    <p>3.4       Nothing in this License constitutes or shall be construed to be, or shall imply, that User is, or User’s use of the Licensed Material in any way is, connected with, or sponsored, endorsed, or granted official status by, Licensor or any other person associated with Licensor or to whom attribution is to be given under Section 3.1 or Section 3.2.</p>
