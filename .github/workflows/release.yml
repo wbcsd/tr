@@ -1,0 +1,23 @@
+name: Create Release Pull Request
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version"
+        required: true
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Get date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y%m%d')"
+
+      - name: Create Pull Request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr create --title "Release v${{inputs.version}}" --body "Automated release of v${{inputs.version}}" --base main --head release-v${{ inputs.version }}-${{steps.date.outputs.date}}
