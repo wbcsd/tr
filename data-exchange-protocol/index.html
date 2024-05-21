@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>Technical Specifications for PCF Data Exchange (2.2.0)</title>
+  <title>Technical Specifications for PCF Data Exchange (2.2.0-20240402)</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <script data-domain="wbcsd.github.io" defer src="https://plausible.io/js/script.js"></script>
 <style data-fill-with="stylesheet">/******************************************************************************
@@ -2177,8 +2177,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
 }
 </style>
   <meta content="Bikeshed version d765c696b, updated Fri Mar 8 15:58:52 2024 -0800" name="generator">
-  <link href="https://wbcsd.github.io/tr/2024/data-exchange-protocol-20240410/" rel="canonical">
-  <meta content="46f3662367f70502f9b83ac18980a7393b9fea87" name="revision">
+  <link href="https://wbcsd.github.io/tr/2023/data-exchange-protocol-20231207/" rel="canonical">
+  <meta content="ec52e046eaefcf2921df9d5b3293c40fa39d3e43" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2859,13 +2859,12 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">Technical Specifications for PCF Data Exchange (Version 2.2.0)</h1>
+   <h1 class="p-name no-ref" id="title">Technical Specifications for PCF Data Exchange (Version 2.2.0-20240402)</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Consultation Draft</span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Latest published version:
-     <dd><a href="https://wbcsd.github.io/tr/2024/data-exchange-protocol-20240410/">https://wbcsd.github.io/tr/2024/data-exchange-protocol-20240410/</a>
-     <dt>Previous Versions:
-     <dd><a href="https://wbcsd.github.io/tr/2023/data-exchange-protocol-20231207/" rel="prev">https://wbcsd.github.io/tr/2023/data-exchange-protocol-20231207/</a>
+     <dd><a href="https://wbcsd.github.io/tr/2023/data-exchange-protocol-20231207/">https://wbcsd.github.io/tr/2023/data-exchange-protocol-20231207/</a>
      <dt>Feedback:
      <dd><span><a href="mailto:public-dev@pathfinder.sine.dev?subject=%5Bdata-exchange-protocol%5D%20YOUR%20TOPIC%20HERE">public-dev@pathfinder.sine.dev</a> with subject line “<kbd>[data-exchange-protocol] <i data-lt>… message topic …</i></kbd>”</span>
      <dd><a href="https://github.com/wbcsd/data-exchange-protocol/issues/">GitHub</a>
@@ -3124,7 +3123,6 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li>
      <a href="#changelog"><span class="secno"></span> <span class="content">Appendix B: Changelog</span></a>
      <ol class="toc">
-      <li><a href="#changelog-2.2.0"><span class="secno"></span> <span class="content">Version 2.2.0 (Apr 10, 2024)</span></a>
       <li><a href="#changelog-2.2.0-20240402"><span class="secno"></span> <span class="content">Version 2.2.0-20240402 (Apr 02, 2024)</span></a>
       <li><a href="#changelog-2.2.0-20240327"><span class="secno"></span> <span class="content">Version 2.2.0-20240327 (Mar 27, 2024)</span></a>
       <li><a href="#changelog-2.2.0-20240320"><span class="secno"></span> <span class="content">Version 2.2.0-20240320 (Mar 20, 2024)</span></a>
@@ -3158,6 +3156,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    </ol>
   </nav>
   <main>
+   <p><strong class="advisement"> This document is a work in progress and should not be used for conformance testing. Please refer to the <a href="https://wbcsd.github.io/tr/2023/data-exchange-protocol-20231207/">latest
+stable version of the Technical Specifications</a> for conformance testing. All feedback is welcome.</strong></p>
    <h2 class="heading settled" data-level="1" id="intro"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#intro"></a></h2>
    <p>This document contains the necessary technical foundation for the <a data-link-type="dfn" href="#pathfinder-network" id="ref-for-pathfinder-network">Pathfinder Network</a>, an open and global network for emission data exchange.</p>
    <p>The goal of this document is to enable the <a data-link-type="dfn" href="#interoperable" id="ref-for-interoperable">interoperable</a> exchange of <a data-link-type="dfn" href="#pcf" id="ref-for-pcf">Product Carbon Footprints</a> across <a href="#conformance">conforming</a> <a data-link-type="dfn" href="#host-system" id="ref-for-host-system">host systems</a>.</p>
@@ -3453,7 +3453,7 @@ incorporate new or refined data from <a data-link-type="dfn" href="#data-owner" 
        <td>String 
        <td>M 
        <td>
-         The version of the ProductFootprint data specification with value <code>2.2.0</code>. 
+         The version of the ProductFootprint data specification with value <code>2.2.0-20240402</code>. 
         <p><strong class="advisement"> Subsequent revisions will update this value according to <a href="https://semver.org/lang/en/">Semantic Versioning 2.0.0</a>.</strong></p>
       <tr>
        <td><dfn class="dfn-paneled" data-dfn-for="ProductFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-productfootprint-precedingpfids"><code>precedingPfIds</code></dfn> : <a data-link-type="dfn" href="#pfid" id="ref-for-pfid①">PfId</a> 
@@ -4421,7 +4421,7 @@ a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①�
    <h4 class="heading settled" data-level="5.28.1" id="dt-decimal-json"><span class="secno">5.28.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-decimal-json"></a></h4>
    <p>Each Decimal MUST be encoded as a JSON String.</p>
    <h3 class="heading settled" data-level="5.29" id="dt-pfid"><span class="secno">5.29. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="pfid">PfId</dfn></span><a class="self-link" href="#dt-pfid"></a></h3>
-   <p>A PfId MUST be a UUID v4 as specified in <a data-link-type="biblio" href="#biblio-rfc4122" title="A Universally Unique IDentifier (UUID) URN Namespace">[RFC4122]</a>.</p>
+   <p>A PfId MUST be a UUID v4 as specified in <a data-link-type="biblio" href="#biblio-rfc4122" title="Universally Unique IDentifiers (UUIDs)">[RFC4122]</a>.</p>
    <h4 class="heading settled" data-level="5.29.1" id="dt-pfid-json"><span class="secno">5.29.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-pfid-json"></a></h4>
    <p>Each PfId MUST be encoded as a JSON String.</p>
    <p>Example JSON string value:</p>
@@ -4571,7 +4571,7 @@ Additionally, the value of <code><a data-link-type="element-sub" href="#element-
     <li data-md>
      <p>data recipient retrieving the <a data-link-type="dfn" href="#access-token" id="ref-for-access-token">access token</a> from <a data-link-type="dfn" href="#authendpoint" id="ref-for-authendpoint②">AuthEndpoint</a> (see <a href="#api-action-auth-request">§ 7.5.1 Request Syntax (HTTP/1.1)</a>).</p>
    </ol>
-   <p class="note" role="note"><span class="marker">Note:</span> The <a data-link-type="dfn" href="#authentication-flow" id="ref-for-authentication-flow">authentication flow</a> is defined such that a Version 2.2.0 data recipient can authenticate against host versions irrespective of their support for OpenID-Connect.</p>
+   <p class="note" role="note"><span class="marker">Note:</span> The <a data-link-type="dfn" href="#authentication-flow" id="ref-for-authentication-flow">authentication flow</a> is defined such that a Version 2.2.0-20240402 data recipient can authenticate against host versions irrespective of their support for OpenID-Connect.</p>
    <figure>
      <img height="100%" src="diagrams/authentication-flow.svg" width="100%"> 
     <figcaption>Authentication flow.</figcaption>
@@ -5602,8 +5602,6 @@ d.         Share (subject to compliance with Section 3.2) any Separate Derivativ
    <p>7.6       This License, any performance hereunder, the interpretation, construction, validity, and enforceability of this License and any term, condition, and provision of this License, and any dispute, and the resolution of any dispute, under this License shall be governed by the law of the State of New York, United States of America, without regard to any conflicts of laws provisions thereof that would result in the application of the law of any other jurisdiction.</p>
    <p>7.7       If any term, condition, or provision of this License is held to be invalid or unenforceable, the meaning thereof will be construed, to the extent feasible, so as to render the provision enforceable, and if no feasible interpretation shall save such provision, it will be severed from the remainder of this License, as appropriate, which remainder shall remain in full force and effect unless the severed provision is essential and material to the rights or benefits received by User and Licensor, in which case this License shall be deemed terminated (subject to Section 6.3, as applicable).</p>
    <h2 class="heading settled" id="changelog"><span class="content">Appendix B: Changelog</span><a class="self-link" href="#changelog"></a></h2>
-   <h3 class="heading settled" id="changelog-2.2.0"><span class="content">Version 2.2.0 (Apr 10, 2024)</span><a class="self-link" href="#changelog-2.2.0"></a></h3>
-   <p>Release.</p>
    <h3 class="heading settled" id="changelog-2.2.0-20240402"><span class="content">Version 2.2.0-20240402 (Apr 02, 2024)</span><a class="self-link" href="#changelog-2.2.0-20240402"></a></h3>
    <p>Summary of changes:</p>
    <ol>
@@ -6272,7 +6270,7 @@ i.e. <em>no</em> semantical update to the specification whatsoever</p>
    <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
    <dt id="biblio-rfc4122">[RFC4122]
-   <dd>P. Leach; M. Mealling; R. Salz. <a href="https://www.rfc-editor.org/rfc/rfc4122"><cite>A Universally Unique IDentifier (UUID) URN Namespace</cite></a>. July 2005. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc4122">https://www.rfc-editor.org/rfc/rfc4122</a>
+   <dd>K. Davis; B. Peabody; P. Leach. <a href="https://www.rfc-editor.org/rfc/rfc9562"><cite>Universally Unique IDentifiers (UUIDs)</cite></a>. May 2024. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc9562">https://www.rfc-editor.org/rfc/rfc9562</a>
    <dt id="biblio-rfc6749">[RFC6749]
    <dd>D. Hardt, Ed.. <a href="https://www.rfc-editor.org/rfc/rfc6749"><cite>The OAuth 2.0 Authorization Framework</cite></a>. October 2012. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc6749">https://www.rfc-editor.org/rfc/rfc6749</a>
    <dt id="biblio-rfc6750">[RFC6750]
