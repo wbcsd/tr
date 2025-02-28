@@ -2445,7 +2445,7 @@ See <a data-link-type="biblio" href="#biblio-pact-methodology" title="PACT Pathf
    <p>Achieving transparency in carbon emissions at the product level is challenging due to the complexity of global supply chains. This specification focuses on enabling transparency through a peer-to-peer PCF data exchange by specifying necessary aspects for achieving interoperability, such as the <a href="#data-model">data model</a> and <a href="#api">API</a>.</p>
    <p>This chapter provides examples for inter-company business cases related to the exchange of <a data-link-type="dfn" href="#pcf" id="ref-for-pcf②">PCFs</a>, focusing on both asynchronous event processing and synchronous API calls.</p>
    <h3 class="heading settled" data-level="4.1" id="business-cases-async-events"><span class="secno">4.1. </span><span class="content">Asynchronous Exchange</span><a class="self-link" href="#business-cases-async-events"></a></h3>
-   <p>Exchanging PCF’s asynchronously requires <strong>both</strong> the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner">data owner</a> <strong>and</strong> the <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①">data recipient</a> to run a PACT conformant host system, <strong>both</strong> sides being able to initiate communication to each other.</p>
+   <p>Exchanging PCFs asynchronously requires <strong>both</strong> the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner">data owner</a> <strong>and</strong> the <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①">data recipient</a> to run a PACT conformant host system, <strong>both</strong> sides being able to initiate communication to each other.</p>
    <h4 class="heading settled" data-level="4.1.1" id="requesting-a-pcf"><span class="secno">4.1.1. </span><span class="content">Requesting a PCF</span><a class="self-link" href="#requesting-a-pcf"></a></h4>
    <p>Generally, the data recipient sends a <code>RequestCreatedEvent</code> event to the data owner. The data owner will try to fullfil this request and, after some time, send the a <code>RequestFullfilledEvent</code> event back to the recipient.</p>
    <ol>
@@ -2473,15 +2473,15 @@ See <a data-link-type="biblio" href="#biblio-pact-methodology" title="PACT Pathf
    </ol>
    <p>Refer to <a href="#api-action-events">§ 8.7 Action Events</a> for detailed request and response formats.</p>
    <h3 class="heading settled" data-level="4.2" id="synchronous-retrieval"><span class="secno">4.2. </span><span class="content">Synchronous retrieval</span><a class="self-link" href="#synchronous-retrieval"></a></h3>
-   <p>The synchronous part of te API allows for immediate retrieval of PCF’s. Refer to <a href="#api-action-list">§ 8.5 Action ListFootprints</a> and <a href="#api-action-get">§ 8.6 Action GetFootprint</a> for detailed request and response formats.</p>
-   <h4 class="heading settled" data-level="4.2.1" id="getting-multiple-pcfs"><span class="secno">4.2.1. </span><span class="content">Getting multiple PCF’s</span><a class="self-link" href="#getting-multiple-pcfs"></a></h4>
-   <p>The <code>ListFootprints</code> action allows for directly retrieving multiple PCF’s. Starting from version 3.0, host systems
+   <p>The synchronous part of te API allows for immediate retrieval of PCFs. Refer to <a href="#api-action-list">§ 8.5 Action ListFootprints</a> and <a href="#api-action-get">§ 8.6 Action GetFootprint</a> for detailed request and response formats.</p>
+   <h4 class="heading settled" data-level="4.2.1" id="getting-multiple-pcfs"><span class="secno">4.2.1. </span><span class="content">Getting multiple PCFs</span><a class="self-link" href="#getting-multiple-pcfs"></a></h4>
+   <p>The <code>ListFootprints</code> action allows for directly retrieving multiple PCFs. Starting from version 3.0, host systems
 must provide filtering on a minimum set of criteria.</p>
    <ol>
     <li data-md>
      <p>The data recipient authenticates with the data owner.</p>
     <li data-md>
-     <p>The data recipient calls the <code>/footprints</code> endpoint, optionally providing a filter with search criteria and a limit to obtain a list of PCF’s.</p>
+     <p>The data recipient calls the <code>/footprints</code> endpoint, optionally providing a filter with search criteria and a limit to obtain a list of PCFs.</p>
     <li data-md>
      <p>
       After validating the request, the data owner returns a 2xx status code and the list of {
@@ -2496,12 +2496,12 @@ must provide filtering on a minimum set of criteria.</p>
     <li data-md>
      <p>The data recipient calls the <code>/footprints/{id}</code> endpoint, providing the PCF ID (in UUID format)</p>
     <li data-md>
-     <p>If found, the data owner returns the PCF in <code><a data-link-type="element" href="#elementdef-productfootprint" id="ref-for-elementdef-productfootprint①">ProductFootprint</a></code> and HTTP status code 200. If not found an 401 (Not found) status code will be returned.</p>
+     <p>If found, the data owner returns the PCF in <code><a data-link-type="element" href="#elementdef-productfootprint" id="ref-for-elementdef-productfootprint①">ProductFootprint</a></code> and HTTP status code 200. If not found a 404 (Not found) status code will be returned.</p>
    </ol>
    <h2 class="heading settled" data-level="5" id="lifecycle"><span class="secno">5. </span><span class="content">Product Footprint Lifecycle</span><a class="self-link" href="#lifecycle"></a></h2>
    <h3 class="heading settled" data-level="5.1" id="lifecycle-intro"><span class="secno">5.1. </span><span class="content">Introduction</span><a class="self-link" href="#lifecycle-intro"></a></h3>
    <div class="note" role="note">This section is non-normative</div>
-   <p>The contents of a <code><a data-link-type="element" href="#elementdef-productfootprint" id="ref-for-elementdef-productfootprint②">Product Footprints</a></code> can change over time. For instance when a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①">data owner</a> publishes an updated Product Footprint ("upstream Product Footprints") which goes into the calculation of another Product Footprint ("downstream Product Footprint").</p>
+   <p>The contents of <code><a data-link-type="element" href="#elementdef-productfootprint" id="ref-for-elementdef-productfootprint②">Product Footprints</a></code> can change over time. For instance when a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①">data owner</a> publishes an updated Product Footprint ("upstream Product Footprints") which goes into the calculation of another Product Footprint ("downstream Product Footprint").</p>
    <p>Even without upstream changes, a downstream Product Footprint can undergo changes in its own right, for instance when calculation errors are discovered and fixed, or when secondary emission databases are updated.</p>
    <p>This section defines how changes to Product Footprints shall be handled by <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner②">data owners</a> and communicated to <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient②">data recipients</a> through the <code><a data-link-type="element" href="#elementdef-productfootprint" id="ref-for-elementdef-productfootprint③">ProductFootprint</a></code> data model.</p>
    <p>Starting with Version 3.0, any change to a Product Footprint will result in a new Product Footprint with a new ID. The previous Product Footprint will be marked as <code>Deprecated</code>.</p>
@@ -2541,7 +2541,7 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
    <p>This specification describes how the product ID URN (Uniform Resource Name) should be constructed in cases where no formal namespace for a given product identifier is defined.</p>
    <p>This will not eliminate the need for a mapping process but will ease mapping identifiers with a common, easily understood structure. Further, this proposal ensures interoperability with industry-specific product identifiers.</p>
    <p>We recognize there are existing relevant namespaces and corresponding URN syntax specifications. These can either be IANA-registered namespaces (like <code>urn:ISBN</code>) or widely used standards like <code>urn:gtin</code>. When product identification based on one or more of these standards is applicable, the corresponding namespaces should be used.</p>
-   <p>Similar to product identifiers, product classifiers <a data-link-type="dfn">ProductClassifications</a> contain URN’s, using well-known namespaces when applicable, or a custom <code>pact</code> namespace if needed.</p>
+   <p>Similar to product identifiers, product classifiers <a data-link-type="dfn">ProductClassifications</a> contain URNs, using well-known namespaces when applicable, or a custom <code>pact</code> namespace if needed.</p>
    <h3 class="heading settled" data-level="6.1" id="product-identifier-urns"><span class="secno">6.1. </span><span class="content">Product Identifier URN’s</span><a class="self-link" href="#product-identifier-urns"></a></h3>
     Each ProductID MUST be a URN as specified in <a data-link-type="biblio" href="#biblio-rfc8141" title="Uniform Resource Names (URNs)">[RFC8141]</a>. Accordingly, every URN conforms to the following syntax: 
 <pre>urn:namespace:namespace-specific-string
@@ -2636,7 +2636,7 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
 <c- u>GWEVSGVZZGPLCZ-UHFFFAOYSA-N"</c-><c- p>]</c->
 </pre>
    </table>
-   <h3 class="heading settled" data-level="6.2" id="product-classification-urns"><span class="secno">6.2. </span><span class="content">Product Classification URN’s</span><a class="self-link" href="#product-classification-urns"></a></h3>
+   <h3 class="heading settled" data-level="6.2" id="product-classification-urns"><span class="secno">6.2. </span><span class="content">Product Classification URNs</span><a class="self-link" href="#product-classification-urns"></a></h3>
    <p>Similar to <a data-link-type="dfn">ProductIds</a> a ProductClassification MUST be a <a data-link-type="dfn">URN</a> as specified in <a data-link-type="biblio" href="#biblio-rfc8141" title="Uniform Resource Names (URNs)">[RFC8141]</a>:</p>
 <pre>urn:namespace:namespace-specific-string
 </pre>
@@ -3813,13 +3813,13 @@ content-length: <a data-link-type="dfn" href="#contentlength" id="ref-for-conten
      <p>if present, MUST be 1 or more product classifications. Will return all footprints with corresponding values in the <code>productClassifications</code> attribute. Note that a footprint itself can have multiple classifications.</p>
     <dt data-md><code>validOn</code> (date-string)
     <dd data-md>
-     <p>if present, MUST match all PCF’s which where valid on the date specified: footprint.validityPeriodBegin &lt;= validOn AND validFrom &lt;= footprint.validityPeriodEnd</p>
+     <p>if present, MUST match all PCFs which where valid on the date specified: footprint.validityPeriodBegin &lt;= validOn AND validFrom &lt;= footprint.validityPeriodEnd</p>
     <dt data-md><code>validAfter</code> (date-string)
     <dd data-md>
-     <p>if present, MUST match PCF’s whith validAfter &lt; footprint.validityPeriodBegin</p>
+     <p>if present, MUST match PCFs whith validAfter &lt; footprint.validityPeriodBegin</p>
     <dt data-md><code>validBefore</code> (date-string)
     <dd data-md>
-     <p>if present, MUST match PCF’s whith validBefore > footprint.validityPeriodEnd</p>
+     <p>if present, MUST match PCFs whith validBefore > footprint.validityPeriodEnd</p>
     <dt data-md><code>status</code> (string)
     <dd data-md>
      <p>If Present, MUST be either be "Active" or "Deprecated"</p>
@@ -4119,13 +4119,13 @@ but not by geography), etc.</p>
      <p>if present, MUST be 1 or more product classifications. Will return all footprints with corresponding values in the <code>productClassifications</code> attribute. Note that a footprint itself can have multiple classifications.</p>
     <dt data-md><code>validOn</code> (date-string)
     <dd data-md>
-     <p>if present, MUST match all PCF’s which where valid on the date specified: footprint.validityPeriodBegin &lt;= validOn AND validFrom &lt;= footprint.validityPeriodEnd</p>
+     <p>if present, MUST match all PCFs which where valid on the date specified: footprint.validityPeriodBegin &lt;= validOn AND validFrom &lt;= footprint.validityPeriodEnd</p>
     <dt data-md><code>validAfter</code> (date-string)
     <dd data-md>
-     <p>if present, MUST match PCF’s whith validAfter &lt; footprint.validityPeriodBegin</p>
+     <p>if present, MUST match PCFs whith validAfter &lt; footprint.validityPeriodBegin</p>
     <dt data-md><code>validBefore</code> (date-string)
     <dd data-md>
-     <p>if present, MUST match PCF’s whith validBefore > footprint.validityPeriodEnd</p>
+     <p>if present, MUST match PCFs whith validBefore > footprint.validityPeriodEnd</p>
     <dt data-md><code>status</code> (string)
     <dd data-md>
      <p>If Present, MUST be either be "Active" or "Deprecated"</p>
