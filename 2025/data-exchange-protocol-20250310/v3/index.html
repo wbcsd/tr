@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 97a1608be, updated Mon Feb 3 16:09:34 2025 -0800" name="generator">
   <link href="https://wbcsd.github.io/tr/2024/data-exchange-protocol-20241024/" rel="canonical">
-  <meta content="648c2ef0ed4b557dd46aec78c3d0875aae57b93e" name="revision">
+  <meta content="516af813ca3fe403c670afe90785169d52ade047" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2208,138 +2208,116 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li>
      <a href="#intro"><span class="secno">1</span> <span class="content">Introduction</span></a>
      <ol class="toc">
-      <li>
-       <a href="#status"><span class="secno">1.1</span> <span class="content">Status of This Document</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#scope"><span class="secno">1.2</span> <span class="content">Scope</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#audience"><span class="secno">1.3</span> <span class="content">Intended Audience</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#about-pact"><span class="secno">1.4</span> <span class="content">About PACT and the PACT Network</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#disclaimer"><span class="secno">1.5</span> <span class="content">Disclaimer</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#acknowledgements"><span class="secno">1.6</span> <span class="content">Acknowledgements</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#section-license"><span class="secno">1.7</span> <span class="content">License</span></a>
-       <ol class="toc"></ol>
+      <li><a href="#status"><span class="secno">1.1</span> <span class="content">Status of This Document</span></a>
+      <li><a href="#scope"><span class="secno">1.2</span> <span class="content">Scope</span></a>
+      <li><a href="#audience"><span class="secno">1.3</span> <span class="content">Intended Audience</span></a>
+      <li><a href="#about-pact"><span class="secno">1.4</span> <span class="content">About PACT and the PACT Network</span></a>
+      <li><a href="#disclaimer"><span class="secno">1.5</span> <span class="content">Disclaimer</span></a>
+      <li><a href="#acknowledgements"><span class="secno">1.6</span> <span class="content">Acknowledgements</span></a>
+      <li><a href="#section-license"><span class="secno">1.7</span> <span class="content">License</span></a>
      </ol>
-    <li>
-     <a href="#terminology"><span class="secno">2</span> <span class="content">Terminology</span></a>
-     <ol class="toc"></ol>
-    <li>
-     <a href="#conformance"><span class="secno">3</span> <span class="content">Conformance</span></a>
-     <ol class="toc"></ol>
+    <li><a href="#terminology"><span class="secno">2</span> <span class="content">Terminology</span></a>
+    <li><a href="#conformance"><span class="secno">3</span> <span class="content">Conformance</span></a>
     <li>
      <a href="#business-cases"><span class="secno">4</span> <span class="content">Exchanging Footprints</span></a>
      <ol class="toc">
-      <li>
-       <a href="#business-cases-async-events"><span class="secno">4.1</span> <span class="content">Asynchronous Exchange</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#synchronous-retrieval"><span class="secno">4.2</span> <span class="content">Synchronous Retrieval</span></a>
-       <ol class="toc"></ol>
+      <li><a href="#business-cases-async-events"><span class="secno">4.1</span> <span class="content">Asynchronous Exchange</span></a>
+      <li><a href="#synchronous-retrieval"><span class="secno">4.2</span> <span class="content">Synchronous Retrieval</span></a>
      </ol>
     <li>
      <a href="#lifecycle"><span class="secno">5</span> <span class="content">Product Footprint Lifecycle</span></a>
      <ol class="toc">
-      <li>
-       <a href="#lifecycle-intro"><span class="secno">5.1</span> <span class="content">Introduction</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#lifecycle-handling"><span class="secno">5.2</span> <span class="content">Change Definition and Handling</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#validity-period"><span class="secno">5.3</span> <span class="content">Validity Period</span></a>
-       <ol class="toc"></ol>
+      <li><a href="#lifecycle-intro"><span class="secno">5.1</span> <span class="content">Introduction</span></a>
+      <li><a href="#lifecycle-handling"><span class="secno">5.2</span> <span class="content">Change Definition and Handling</span></a>
+      <li><a href="#validity-period"><span class="secno">5.3</span> <span class="content">Validity Period</span></a>
      </ol>
     <li>
      <a href="#product-identifiers"><span class="secno">6</span> <span class="content">Product Identification and Classification</span></a>
      <ol class="toc">
-      <li>
-       <a href="#product-identifier-urns"><span class="secno">6.1</span> <span class="content">Product Identifier URN’s</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#product-classification-urns"><span class="secno">6.2</span> <span class="content">Product Classification URN’s</span></a>
-       <ol class="toc"></ol>
+      <li><a href="#product-identifier-urns"><span class="secno">6.1</span> <span class="content">Product Identifier URN’s</span></a>
+      <li><a href="#product-classification-urns"><span class="secno">6.2</span> <span class="content">Product Classification URN’s</span></a>
      </ol>
     <li>
      <a href="#data-model"><span class="secno">7</span> <span class="content">Data Model</span></a>
      <ol class="toc">
-      <li>
-       <a href="#data-model-intro"><span class="secno">7.1</span> <span class="content">Introduction</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#basic-types"><span class="secno">7.2</span> <span class="content">Basic Types</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#qualifiers"><span class="secno">7.3</span> <span class="content">Qualifiers</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#undefined-properties"><span class="secno">7.4</span> <span class="content">Undefined Properties</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#productfootprint"><span class="secno">7.5</span> <span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-productfootprint"><code>ProductFootprint</code></dfn></span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#carbonfootprint"><span class="secno">7.6</span> <span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-carbonfootprint"><code>CarbonFootprint</code></dfn></span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#datamodelextension"><span class="secno">7.7</span> <span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-datamodelextension"><code>DataModelExtension</code></dfn></span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#productorsectorspecificrule"><span class="secno">7.8</span> <span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-productorsectorspecificrule"><code>ProductOrSectorSpecificRule</code></dfn></span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#emissionfactorsource"><span class="secno">7.9</span> <span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-emissionfactorsource"><code>EmissionFactorSource</code></dfn></span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#dataqualityindicators"><span class="secno">7.10</span> <span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-dataqualityindicators"><code>DataQualityIndicators</code></dfn></span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#verification"><span class="secno">7.11</span> <span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-verification"><code>Verification</code></dfn></span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#error"><span class="secno">7.12</span> <span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-error"><code>Error</code></dfn></span></a>
-       <ol class="toc"></ol>
+      <li><a href="#data-model-intro"><span class="secno">7.1</span> <span class="content">Introduction</span></a>
+      <li><a href="#basic-types"><span class="secno">7.2</span> <span class="content">Basic Types</span></a>
+      <li><a href="#qualifiers"><span class="secno">7.3</span> <span class="content">Qualifiers</span></a>
+      <li><a href="#undefined-properties"><span class="secno">7.4</span> <span class="content">Undefined Properties</span></a>
+      <li><a href="#productfootprint"><span class="secno">7.5</span> <span class="content"><span><code>ProductFootprint</code></span></span></a>
+      <li><a href="#carbonfootprint"><span class="secno">7.6</span> <span class="content"><span><code>CarbonFootprint</code></span></span></a>
+      <li><a href="#datamodelextension"><span class="secno">7.7</span> <span class="content"><span><code>DataModelExtension</code></span></span></a>
+      <li><a href="#productorsectorspecificrule"><span class="secno">7.8</span> <span class="content"><span><code>ProductOrSectorSpecificRule</code></span></span></a>
+      <li><a href="#emissionfactorsource"><span class="secno">7.9</span> <span class="content"><span><code>EmissionFactorSource</code></span></span></a>
+      <li><a href="#dataqualityindicators"><span class="secno">7.10</span> <span class="content"><span><code>DataQualityIndicators</code></span></span></a>
+      <li><a href="#verification"><span class="secno">7.11</span> <span class="content"><span><code>Verification</code></span></span></a>
+      <li><a href="#error"><span class="secno">7.12</span> <span class="content"><span><code>Error</code></span></span></a>
      </ol>
     <li>
      <a href="#api"><span class="secno">8</span> <span class="content">HTTP REST API</span></a>
      <ol class="toc">
-      <li>
-       <a href="#api-intro"><span class="secno">8.1</span> <span class="content">Introduction</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#api-host-system"><span class="secno">8.2</span> <span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="host-system">Host System</dfn></span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#api-host-system-out-of-scope"><span class="secno">8.3</span> <span class="content">Out of scope</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#api-error-handling"><span class="secno">8.4</span> <span class="content">Error Handling</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#api-auth"><span class="secno">8.5</span> <span class="content">Authentication Flow</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#action-listfootprints"><span class="secno">8.6</span> <span class="content">Action ListFootprints</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#action-getfootprint"><span class="secno">8.7</span> <span class="content">Action GetFootprint</span></a>
-       <ol class="toc"></ol>
-      <li>
-       <a href="#action-events"><span class="secno">8.8</span> <span class="content">Action Events</span></a>
-       <ol class="toc"></ol>
+      <li><a href="#api-intro"><span class="secno">8.1</span> <span class="content">Introduction</span></a>
+      <li><a href="#api-host-system"><span class="secno">8.2</span> <span class="content"><span>Host System</span></span></a>
+      <li><a href="#api-host-system-out-of-scope"><span class="secno">8.3</span> <span class="content">Out of scope</span></a>
+      <li><a href="#api-error-handling"><span class="secno">8.4</span> <span class="content">Error Handling</span></a>
+      <li><a href="#api-auth"><span class="secno">8.5</span> <span class="content">Authentication Flow</span></a>
+      <li><a href="#action-listfootprints"><span class="secno">8.6</span> <span class="content">Action ListFootprints</span></a>
+      <li><a href="#action-getfootprint"><span class="secno">8.7</span> <span class="content">Action GetFootprint</span></a>
+      <li><a href="#action-events"><span class="secno">8.8</span> <span class="content">Action Events</span></a>
      </ol>
     <li>
-     <a href="#api-examples"><span class="secno">9</span> <span class="content">Examples #</span></a>
-     <ol class="toc"></ol>
+     <a href="#api-examples"><span class="secno">9</span> <span class="content">Examples</span></a>
+     <ol class="toc">
+      <li><a href="#api-action-list-example"><span class="secno">9.1</span> <span class="content">Example Action ListFootprints</span></a>
+      <li><a href="#api-action-get-example"><span class="secno">9.2</span> <span class="content">Example Action GetFootprint</span></a>
+      <li><a href="#api-error-response-example"><span class="secno">9.3</span> <span class="content">Example Error Response</span></a>
+      <li><a href="#api-action-events-example"><span class="secno">9.4</span> <span class="content">Example Action Events</span></a>
+     </ol>
+    <li><a href="#license"><span class="secno"></span> <span class="content">Appendix A: License</span></a>
+    <li>
+     <a href="#changelog"><span class="secno"></span> <span class="content">Appendix B: Changelog</span></a>
+     <ol class="toc">
+      <li><a href="#changelog-3.0.0-20250217"><span class="secno"></span> <span class="content">Version 3.0.0-20250217 (Draft Feb 17, 2025)</span></a>
+      <li><a href="#changelog-3.0.0-20250212"><span class="secno"></span> <span class="content">Version 3.0.0-20250212 (Feb 12, 2025)</span></a>
+      <li><a href="#changelog-3.0.0-20250211"><span class="secno"></span> <span class="content">Version 3.0.0-20250211 (Feb 11, 2025)</span></a>
+      <li><a href="#changelog-3.0.0-20250207"><span class="secno"></span> <span class="content">Version 3.0.0-20250207 (Feb 7, 2025)</span></a>
+      <li><a href="#changelog-3.0.0-20250127"><span class="secno"></span> <span class="content">Version 3.0.0-20250127 (Jan 27, 2025)</span></a>
+      <li><a href="#changelog-3.0.0-20241212"><span class="secno"></span> <span class="content">Version 3.0.0-20241212 (Dec 12, 2024)</span></a>
+      <li><a href="#changelog-2.3.0"><span class="secno"></span> <span class="content">Version 2.3.0 (Oct 24, 2024)</span></a>
+      <li><a href="#changelog-2.3.0-20241008"><span class="secno"></span> <span class="content">Version 2.3.0-20241010 (October 10, 2024)</span></a>
+      <li><a href="#changelog-2.3.0-20240904"><span class="secno"></span> <span class="content">Version 2.3.0-20240904 (September 4, 2024)</span></a>
+      <li><a href="#changelog-2.3.0-20240625"><span class="secno"></span> <span class="content">Version 2.3.0-20240625 (June 25, 2024)</span></a>
+      <li><a href="#changelog-2.2.1-20240624"><span class="secno"></span> <span class="content">Version 2.2.1-20240624 (June 24, 2024)</span></a>
+      <li><a href="#changelog-2.2.1-20240513"><span class="secno"></span> <span class="content">Version 2.2.1-20240513 (May 13, 2024)</span></a>
+      <li><a href="#changelog-2.2.1-20240507"><span class="secno"></span> <span class="content">Version 2.2.1-20240507 (May 7, 2024)</span></a>
+      <li><a href="#changelog-2.2.1-20240430"><span class="secno"></span> <span class="content">Version 2.2.1-20240430 (Apr 30, 2024)</span></a>
+      <li><a href="#changelog-2.2.0"><span class="secno"></span> <span class="content">Version 2.2.0 (Apr 10, 2024)</span></a>
+      <li><a href="#changelog-2.2.0-20240402"><span class="secno"></span> <span class="content">Version 2.2.0-20240402 (Apr 02, 2024)</span></a>
+      <li><a href="#changelog-2.2.0-20240327"><span class="secno"></span> <span class="content">Version 2.2.0-20240327 (Mar 27, 2024)</span></a>
+      <li><a href="#changelog-2.2.0-20240320"><span class="secno"></span> <span class="content">Version 2.2.0-20240320 (Mar 20, 2024)</span></a>
+      <li><a href="#changelog-2.2.0-20240312"><span class="secno"></span> <span class="content">Version 2.2.0-20240312 (Mar 12, 2024)</span></a>
+      <li><a href="#changelog-2.1.0"><span class="secno"></span> <span class="content">Version 2.1.0 (Dec 07, 2023)</span></a>
+      <li><a href="#changelog-2.0.1-20231026"><span class="secno"></span> <span class="content">Version 2.0.1-20231026 (Oct 26, 2023)</span></a>
+      <li><a href="#changelog-2.0.1-20230927"><span class="secno"></span> <span class="content">Version 2.0.1-20230927 (Sep 27, 2023)</span></a>
+      <li><a href="#changelog-2.0.1-20230720"><span class="secno"></span> <span class="content">Version 2.0.1-20230720 (Jul 20, 2023)</span></a>
+      <li><a href="#changelog-2.0.1-20230629"><span class="secno"></span> <span class="content">Version 2.0.1-20230629 (Jun 29, 2023)</span></a>
+      <li><a href="#changelog-2.0.1-20230627"><span class="secno"></span> <span class="content">Version 2.0.1-20230627 (Jun 27, 2023)</span></a>
+      <li><a href="#changelog-2.0.1-20230522"><span class="secno"></span> <span class="content">Version 2.0.1-20230522 (May 22, 2023)</span></a>
+      <li><a href="#changelog-2.0.1-20230314"><span class="secno"></span> <span class="content">Version 2.0.1-20230314 (Mar 14, 2023)</span></a>
+      <li><a href="#changelog-2.0.0"><span class="secno"></span> <span class="content">Version 2.0.0 (Feb 20, 2023)</span></a>
+      <li><a href="#changelog-1.0.1"><span class="secno"></span> <span class="content">Version 1.0.1</span></a>
+     </ol>
+    <li>
+     <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
+     <ol class="toc">
+      <li><a href="#index-defined-here"><span class="secno"></span> <span class="content">Terms defined by this specification</span></a>
+     </ol>
+    <li>
+     <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
+     <ol class="toc">
+      <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
+      <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
+     </ol>
    </ol>
   </nav>
   <main>
@@ -2810,7 +2788,7 @@ further information to a <code><a data-link-type="element" href="#elementdef-pro
 </pre>
    <p>In this example, <code>property2</code> is considered <a class="property css" data-link-type="property">undefined</a>.
 Also, any property not present in the object, for example <code>property3</code> is also considered <code>undefined</code>.</p>
-   <h3 class="heading settled" data-level="7.5" id="productfootprint"><span class="secno">7.5. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-productfootprint①"><code>ProductFootprint</code></dfn></span><a class="self-link" href="#productfootprint"></a></h3>
+   <h3 class="heading settled" data-level="7.5" id="productfootprint"><span class="secno">7.5. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-productfootprint"><code>ProductFootprint</code></dfn></span><a class="self-link" href="#productfootprint"></a></h3>
     <code>ProductFootprint</code> is a data type which represents the carbon footprint
 of a product under a specific scope (<a href="#dt-carbonfootprint-scope">§ 7.6.1 Scope of a CarbonFootprint</a>)
 and with values calculated in accordance with the <a data-link-type="dfn" href="#pact-methodology" id="ref-for-pact-methodology④">PACT Methodology</a>. 
@@ -2984,7 +2962,7 @@ type <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="re
        <p>If defined, 1 or more data model extensions associated with the ProductFootprint.
 See <code><a data-link-type="element" href="#elementdef-datamodelextension" id="ref-for-elementdef-datamodelextension②">DataModelExtension</a></code> for details.</p>
    </table>
-   <h3 class="heading settled" data-level="7.6" id="carbonfootprint"><span class="secno">7.6. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-carbonfootprint①"><code>CarbonFootprint</code></dfn></span><a class="self-link" href="#carbonfootprint"></a></h3>
+   <h3 class="heading settled" data-level="7.6" id="carbonfootprint"><span class="secno">7.6. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-carbonfootprint"><code>CarbonFootprint</code></dfn></span><a class="self-link" href="#carbonfootprint"></a></h3>
     A CarbonFootprint represents the carbon footprint of a product and related data in accordance with the <a data-link-type="dfn" href="#pact-methodology" id="ref-for-pact-methodology⑤">PACT Methodology</a>. 
    <h4 class="heading settled" data-level="7.6.1" id="dt-carbonfootprint-scope"><span class="secno">7.6.1. </span><span class="content">Scope of a CarbonFootprint</span><a class="self-link" href="#dt-carbonfootprint-scope"></a></h4>
    <p>Each CarbonFootprint is scoped by</p>
@@ -3375,7 +3353,7 @@ Can also be referred to as 'reporting period'.</p>
        <p>The presence of the <code><a data-link-type="element" href="#elementdef-verification" id="ref-for-elementdef-verification①">Verification</a></code> object indicates whether or not the <code><a data-link-type="element" href="#elementdef-carbonfootprint" id="ref-for-elementdef-carbonfootprint⑧">CarbonFootprint</a></code> has
 been verified in line with <a data-link-type="dfn" href="#pact-methodology" id="ref-for-pact-methodology①⑧">PACT Methodology</a> requirements</p>
    </table>
-   <h3 class="heading settled" data-level="7.7" id="datamodelextension"><span class="secno">7.7. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-datamodelextension①"><code>DataModelExtension</code></dfn></span><a class="self-link" href="#datamodelextension"></a></h3>
+   <h3 class="heading settled" data-level="7.7" id="datamodelextension"><span class="secno">7.7. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-datamodelextension"><code>DataModelExtension</code></dfn></span><a class="self-link" href="#datamodelextension"></a></h3>
     Each data model extension MUST be a valid JSON object conforming with the <a href="https://wbcsd.github.io/data-model-extensions/spec/#instantiation">JSON Representation of a Data Model Extension</a>. 
    <p>See <a data-link-type="biblio" href="#biblio-data-model-extensions" title="Technical Specification for Data Model Extensions">[DATA-MODEL-EXTENSIONS]</a> for technical details and <a data-link-type="biblio" href="#biblio-extensions-guidance" title="Guidance and Criteria Catalog for Pathfinder Data Model Extensions">[EXTENSIONS-GUIDANCE]</a> for data model extension guidance.</p>
    <div class="example" id="example-45babcf8">
@@ -3424,7 +3402,7 @@ Semantic Versioning 2.0.0.</p>
        <p>The value MUST be a JSON Object that conforms to the extension schema file
 referenced by the dataSchema property.</p>
    </table>
-   <h3 class="heading settled" data-level="7.8" id="productorsectorspecificrule"><span class="secno">7.8. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-productorsectorspecificrule①"><code>ProductOrSectorSpecificRule</code></dfn></span><a class="self-link" href="#productorsectorspecificrule"></a></h3>
+   <h3 class="heading settled" data-level="7.8" id="productorsectorspecificrule"><span class="secno">7.8. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-productorsectorspecificrule"><code>ProductOrSectorSpecificRule</code></dfn></span><a class="self-link" href="#productorsectorspecificrule"></a></h3>
     A ProductOrSectorSpecificRule refers to a set of product or sector specific rules published by a specific operator and applied during product carbon footprint calculation. 
    <div class="example" id="example-76509230">
     <a class="self-link" href="#example-76509230"></a> 
@@ -3475,7 +3453,7 @@ calculation.</p>
        <p>If operator is Other, then this attribute must be populated with the name
 of the operator.</p>
    </table>
-   <h3 class="heading settled" data-level="7.9" id="emissionfactorsource"><span class="secno">7.9. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-emissionfactorsource①"><code>EmissionFactorSource</code></dfn></span><a class="self-link" href="#emissionfactorsource"></a></h3>
+   <h3 class="heading settled" data-level="7.9" id="emissionfactorsource"><span class="secno">7.9. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-emissionfactorsource"><code>EmissionFactorSource</code></dfn></span><a class="self-link" href="#emissionfactorsource"></a></h3>
     References emission factor databases, see <a data-link-type="dfn" href="#pact-methodology" id="ref-for-pact-methodology①⑨">PACT Methodology</a> Section 4.1.3.2. 
 <pre class="language-json highlight"><c- p>{</c->
   <c- f>"name"</c-><c- p>:</c-> <c- u>"ecoinvent"</c-><c- p>,</c->
@@ -3504,7 +3482,7 @@ of the operator.</p>
 <pre class="language-json highlight"><c- f>"version"</c-><c- p>:</c-> <c- u>"3.9.1"</c->
 </pre>
    </table>
-   <h3 class="heading settled" data-level="7.10" id="dataqualityindicators"><span class="secno">7.10. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-dataqualityindicators①"><code>DataQualityIndicators</code></dfn></span><a class="self-link" href="#dataqualityindicators"></a></h3>
+   <h3 class="heading settled" data-level="7.10" id="dataqualityindicators"><span class="secno">7.10. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-dataqualityindicators"><code>DataQualityIndicators</code></dfn></span><a class="self-link" href="#dataqualityindicators"></a></h3>
     Data type DataQualityIndicators contains the quantitative data quality indicators in conformance with PACT Methodology Section 4.2.3 and Appendix B. 
    <p>Each property is optional until the reference period includes the beginning of calendar year 2025, or later, when all properties MUST be defined.</p>
    <div class="example" id="example-f2ce7eaf">
@@ -3550,7 +3528,7 @@ scoring the geographical representativeness of the sources used for PCF calculat
 based on weighted average of all inputs.</p>
        <p>The value MUST be between <code>1</code> and <code>5</code> inclusive.</p>
    </table>
-   <h3 class="heading settled" data-level="7.11" id="verification"><span class="secno">7.11. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-verification①"><code>Verification</code></dfn></span><a class="self-link" href="#verification"></a></h3>
+   <h3 class="heading settled" data-level="7.11" id="verification"><span class="secno">7.11. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-verification"><code>Verification</code></dfn></span><a class="self-link" href="#verification"></a></h3>
     Data type <code>Verification</code> contains the verification in conformance with <a data-link-type="dfn" href="#pact-methodology" id="ref-for-pact-methodology②③">PACT Methodology</a>. 
    <div class="example" id="example-76075b2d">
     <a class="self-link" href="#example-76075b2d"></a> Example value for the case that 42% of the product’s overall GHG emissions covered by the data quality assessment: 
@@ -3600,7 +3578,7 @@ based on weighted average of all inputs.</p>
        <div class="json-schema-type">string</div>
        <p>Any additional comments that will clarify the interpretation of the verification.</p>
    </table>
-   <h3 class="heading settled" data-level="7.12" id="error"><span class="secno">7.12. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-error①"><code>Error</code></dfn></span><a class="self-link" href="#error"></a></h3>
+   <h3 class="heading settled" data-level="7.12" id="error"><span class="secno">7.12. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export id="elementdef-error"><code>Error</code></dfn></span><a class="self-link" href="#error"></a></h3>
     Object with error code and description, to be returned by the API methods in case of error.
 See <a href="#api-error-handling">§ 8.4 Error Handling</a> for details. 
    <div class="example" id="example-504e6ec9">
@@ -3636,7 +3614,7 @@ See <a href="#api-error-handling">§ 8.4 Error Handling</a> for details.
    <h3 class="heading settled" data-level="8.1" id="api-intro"><span class="secno">8.1. </span><span class="content">Introduction</span><a class="self-link" href="#api-intro"></a></h3>
    <p>This section defines an <a data-link-type="biblio" href="#biblio-rfc9112" title="HTTP/1.1">HTTP</a>-based API for the <a data-link-type="dfn" href="#interoperable" id="ref-for-interoperable①">interoperable</a> exchange of <a href="#productfootprint">Product Footprint</a> data between <a data-link-type="dfn" href="#host-system" id="ref-for-host-system④">host systems</a>.</p>
    <p>The scope of the HTTP API is minimal by design. Additional features will be added in future versions of this specification.</p>
-   <h3 class="heading settled" data-level="8.2" id="api-host-system"><span class="secno">8.2. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="host-system①">Host System</dfn></span><a class="self-link" href="#api-host-system"></a></h3>
+   <h3 class="heading settled" data-level="8.2" id="api-host-system"><span class="secno">8.2. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="host-system">Host System</dfn></span><a class="self-link" href="#api-host-system"></a></h3>
    <p>A host system serves the needs of a single or multiple <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①⓪">data owners</a>. Additionally, a host system can also serve the needs of <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⓪">data recipients</a> if it retrieves data from host systems by calling the HTTP REST API (<a href="#api">§ 8 HTTP REST API</a>).</p>
    <p>A <a data-link-type="dfn" href="#host-system" id="ref-for-host-system⑤">host system</a> MUST implement the following actions:</p>
    <ul>
@@ -4418,9 +4396,9 @@ with a <code>RequestFulfilledEvent</code> or a <code>RequestRejectedEvent</code>
        Internal Error. 
        <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①④">Error</a></code> object</p>
    </table>
-   <h2 class="heading settled" data-level="9" id="api-examples"><span class="secno">9. </span><span class="content">Examples #</span><a class="self-link" href="#api-examples"></a></h2>
+   <h2 class="heading settled" data-level="9" id="api-examples"><span class="secno">9. </span><span class="content">Examples</span><a class="self-link" href="#api-examples"></a></h2>
    <div class="note" role="note">Non-normative</div>
-   <h4 class="heading settled" data-level="9.1" id="api-action-list-example"><span class="secno">9.1. </span><span class="content">Example Action ListFootprints</span><a class="self-link" href="#api-action-list-example"></a></h4>
+   <h3 class="heading settled" data-level="9.1" id="api-action-list-example"><span class="secno">9.1. </span><span class="content">Example Action ListFootprints</span><a class="self-link" href="#api-action-list-example"></a></h3>
    <div class="example" id="example-30c75c35">
     <a class="self-link" href="#example-30c75c35"></a> 
     <p>Request:</p>
@@ -4529,7 +4507,7 @@ with a <code>RequestFulfilledEvent</code> or a <code>RequestRejectedEvent</code>
 }
 </pre>
    </div>
-   <h4 class="heading settled" data-level="9.2" id="api-action-get-example"><span class="secno">9.2. </span><span class="content">Example Action GetFootprint</span><a class="self-link" href="#api-action-get-example"></a></h4>
+   <h3 class="heading settled" data-level="9.2" id="api-action-get-example"><span class="secno">9.2. </span><span class="content">Example Action GetFootprint</span><a class="self-link" href="#api-action-get-example"></a></h3>
    <div class="example" id="example-4c52f130">
     <a class="self-link" href="#example-4c52f130"></a> 
     <p>Request:</p>
@@ -4629,7 +4607,7 @@ with a <code>RequestFulfilledEvent</code> or a <code>RequestRejectedEvent</code>
 <c- p>}</c->
 </pre>
    </div>
-   <h4 class="heading settled" data-level="9.3" id="api-error-response-example"><span class="secno">9.3. </span><span class="content">Example Error Response</span><a class="self-link" href="#api-error-response-example"></a></h4>
+   <h3 class="heading settled" data-level="9.3" id="api-error-response-example"><span class="secno">9.3. </span><span class="content">Example Error Response</span><a class="self-link" href="#api-error-response-example"></a></h3>
    <div class="example" id="example-9857aa87">
     <a class="self-link" href="#example-9857aa87"></a> 
     <p>Example request:</p>
@@ -4649,7 +4627,7 @@ with a <code>RequestFulfilledEvent</code> or a <code>RequestRejectedEvent</code>
 <c- p>}</c->
 </pre>
    </div>
-   <h4 class="heading settled" data-level="9.4" id="api-action-events-example"><span class="secno">9.4. </span><span class="content">Example Action Events</span><a class="self-link" href="#api-action-events-example"></a></h4>
+   <h3 class="heading settled" data-level="9.4" id="api-action-events-example"><span class="secno">9.4. </span><span class="content">Example Action Events</span><a class="self-link" href="#api-action-events-example"></a></h3>
    <p>Example <strong>ProductFootprint.RequestCreated</strong></p>
    <div class="example" id="example-bf6ebcab">
     <a class="self-link" href="#example-bf6ebcab"></a> 
