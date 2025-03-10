@@ -3615,7 +3615,9 @@ See <a href="#api-error-handling">§ 8.4 Error Handling</a> for details.
    <p>This section defines an <a data-link-type="biblio" href="#biblio-rfc9112" title="HTTP/1.1">HTTP</a>-based API for the <a data-link-type="dfn" href="#interoperable" id="ref-for-interoperable①">interoperable</a> exchange of <a href="#productfootprint">Product Footprint</a> data between <a data-link-type="dfn" href="#host-system" id="ref-for-host-system④">host systems</a>.</p>
    <p>The scope of the HTTP API is minimal by design. Additional features will be added in future versions of this specification.</p>
    <h3 class="heading settled" data-level="8.2" id="api-host-system"><span class="secno">8.2. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="host-system">Host System</dfn></span><a class="self-link" href="#api-host-system"></a></h3>
-   <p>A host system serves the needs of a single or multiple <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①⓪">data owners</a>. Additionally, a host system can also serve the needs of <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⓪">data recipients</a> if it retrieves data from host systems by calling the HTTP REST API (<a href="#api">§ 8 HTTP REST API</a>).</p>
+   <p>A host system serves the needs of a single or multiple <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①⓪">data owners</a>. Additionally, a host system can also serve the needs of <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⓪">data recipients</a> if it retrieves data from other host systems by calling their API.</p>
+   <p>In other words, any host system which implements the API endpoints as described in this specification can play
+the role of <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①①">data owner</a> as well as of <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①①">data recipient</a>, thus mirroring real-world supply chains, also see <a href="#business-cases">§ 4 Exchanging Footprints</a></p>
    <p>A <a data-link-type="dfn" href="#host-system" id="ref-for-host-system⑤">host system</a> MUST implement the following actions:</p>
    <ul>
     <li data-md>
@@ -3623,7 +3625,7 @@ See <a href="#api-error-handling">§ 8.4 Error Handling</a> for details.
     <li data-md>
      <p><a href="#action-listfootprints">Action ListFootprints</a></p>
     <li data-md>
-     <p><a href="#action-getfootprint">Action GetFootprint=</a></p>
+     <p><a href="#action-getfootprint">Action GetFootprint</a></p>
     <li data-md>
      <p><a href="#action-events">Action Events</a></p>
    </ul>
@@ -3702,9 +3704,9 @@ Authorization: Bearer &lt;access_token>
    <h3 class="heading settled" data-level="8.6" id="action-listfootprints"><span class="secno">8.6. </span><span class="content">Action ListFootprints</span><a class="self-link" href="#action-listfootprints"></a></h3>
 <pre class="language-HTTP highlight">GET /3/footprints?params=value&amp;...
 </pre>
-   <p>Retrieve a list of Product Carbon Footprints (PCFs) from the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①①">data owner</a>.
-The <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①①">data recipient</a> can specify various criteria to filter the
-list, and the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①②">data owner</a> can paginate the result set, if necessary.</p>
+   <p>Retrieve a list of Product Carbon Footprints (PCFs) from the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①②">data owner</a>.
+The <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①②">data recipient</a> can specify various criteria to filter the
+list, and the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①③">data owner</a> can paginate the result set, if necessary.</p>
    <p>Host systems SHOULD implement an access management system and only
 return the product footprints for which the data owner granted access 
 to the requesting data recipient.</p>
@@ -3716,7 +3718,7 @@ been deprecated in the resulting list of footprints, except if the <code>status<
    <ol>
     <li data-md>
      <p>The host system MUST NOT return more product footprints than requested in
-case a <code><a data-link-type="element-sub">limit</a></code> parameter was specified by a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①②">data recipient</a></p>
+case a <code><a data-link-type="element-sub">limit</a></code> parameter was specified by a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①③">data recipient</a></p>
     <li data-md>
      <p>The host system MUST return an HTTP <code>Link</code> header if there are additional
 ProductFootprints ready to be retrieved, such that</p>
@@ -3742,7 +3744,7 @@ ProductFootprints ready to be retrieved, such that</p>
       <li data-md>
        <p>MUST return the same set of Product Footprints</p>
       <li data-md>
-       <p>MUST NOT return more product footprints than requested in case <code><a data-link-type="element-sub">limit</a></code> was defined by a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①③">data recipient</a></p>
+       <p>MUST NOT return more product footprints than requested in case <code><a data-link-type="element-sub">limit</a></code> was defined by a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①④">data recipient</a></p>
       <li data-md>
        <p>MUST return a <code>Link</code> header conforming with the previous description in case
 there are additional ProductFootprints available</p>
@@ -3982,11 +3984,11 @@ by the host system.
    <p>The Action Events endpoint supports for the following use cases:</p>
    <ol>
     <li data-md>
-     <p>enabling a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①④">data recipient</a> to request Product Footprints
-from a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①③">data owner</a> by sending a <code>RequestCreatedEvent</code>, to
+     <p>enabling a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⑤">data recipient</a> to request Product Footprints
+from a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①④">data owner</a> by sending a <code>RequestCreatedEvent</code>, to
 which the data owner can answer by sending <code>RequestFulfilledEvent</code> or a <code>RequestRejectedEvent</code>.</p>
     <li data-md>
-     <p>enabling a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①④">data owner</a> to notify a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⑤">data recipient</a> on
+     <p>enabling a <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①⑤">data owner</a> to notify a <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⑥">data recipient</a> on
 updates to 1 or more Product Footprints: <code>PublishedEvent</code></p>
    </ol>
    <p>The Action Events endpoint accepts CloudEvent events (see <a data-link-type="biblio" href="#biblio-ce" title="Cloud Events Specification">[CE]</a>) encoded
@@ -4292,7 +4294,7 @@ See <a href="#api-error-handling">§ 8.4 Error Handling</a> for details.</p>
    </table>
    <h4 class="heading settled" data-level="8.8.4" id="productfootprint-published-event"><span class="secno">8.8.4. </span><span class="content">ProductFootprint Published Event</span><a class="self-link" href="#productfootprint-published-event"></a></h4>
    <p>Notification that a ProductFootprint has been published (either new or updated).
-This event is triggered by the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①⑤">data owner</a> and send to relevant <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⑥">data recipients</a>.</p>
+This event is triggered by the <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner①⑥">data owner</a> and send to relevant <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⑦">data recipients</a>.</p>
    <p>The data object of the <a data-link-type="dfn">PublishedEvent</a> contains the list of Product Footprint <em>IDs</em> that have been published or updated by the data owner.</p>
    <p>The data recipient can retrieve the <em>actual</em> Product Footprints by calling the <a data-link-type="dfn">GetFootprint</a> action on the data owner’s systems.</p>
    <p><strong>Request Body</strong></p>
@@ -4371,7 +4373,7 @@ Authorizaton: Bearer xxxxxxxxxxxxx
       <td>
         Indicates success: the event was accepted by the host system. The response
 body will be empty. 
-       <p>In case of a <code>RequestCreatedEvent</code> the <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⑦">data recipient</a> will be notified
+       <p>In case of a <code>RequestCreatedEvent</code> the <a data-link-type="dfn" href="#data-recipient" id="ref-for-data-recipient①⑧">data recipient</a> will be notified
 at some time in the future by the host system of the results of the request,
 with a <code>RequestFulfilledEvent</code> or a <code>RequestRejectedEvent</code>.</p>
        <p>No content</p>
@@ -5937,8 +5939,8 @@ let dfnPanelData = {
 "classification": {"dfnID":"classification","dfnText":"classification","external":false,"refSections":[],"url":"#classification"},
 "companyid": {"dfnID":"companyid","dfnText":"companyId","external":false,"refSections":[{"refs":[{"id":"ref-for-companyid"}],"title":"Data Model Changes"}],"url":"#companyid"},
 "data-model-extension": {"dfnID":"data-model-extension","dfnText":"Data Model Extension","external":false,"refSections":[{"refs":[{"id":"ref-for-data-model-extension"}],"title":"7.1. Introduction"},{"refs":[{"id":"ref-for-data-model-extension\u2460"}],"title":"7.5. ProductFootprint"}],"url":"#data-model-extension"},
-"data-owner": {"dfnID":"data-owner","dfnText":"Data owner","external":false,"refSections":[{"refs":[{"id":"ref-for-data-owner"}],"title":"4.1. Asynchronous Exchange"},{"refs":[{"id":"ref-for-data-owner\u2460"},{"id":"ref-for-data-owner\u2461"}],"title":"5.1. Introduction"},{"refs":[{"id":"ref-for-data-owner\u2462"}],"title":"6. Product Identification and Classification"},{"refs":[{"id":"ref-for-data-owner\u2463"}],"title":"6.1. Product Identifier URN\u2019s"},{"refs":[{"id":"ref-for-data-owner\u2464"},{"id":"ref-for-data-owner\u2465"}],"title":"7.1. Introduction"},{"refs":[{"id":"ref-for-data-owner\u2466"},{"id":"ref-for-data-owner\u2467"},{"id":"ref-for-data-owner\u2468"}],"title":"7.5. ProductFootprint"},{"refs":[{"id":"ref-for-data-owner\u2460\u24ea"}],"title":"8.2. Host System"},{"refs":[{"id":"ref-for-data-owner\u2460\u2460"},{"id":"ref-for-data-owner\u2460\u2461"}],"title":"8.6. Action ListFootprints"},{"refs":[{"id":"ref-for-data-owner\u2460\u2462"},{"id":"ref-for-data-owner\u2460\u2463"}],"title":"8.8. Action Events"},{"refs":[{"id":"ref-for-data-owner\u2460\u2464"}],"title":"8.8.4. ProductFootprint Published Event"}],"url":"#data-owner"},
-"data-recipient": {"dfnID":"data-recipient","dfnText":"Data recipient","external":false,"refSections":[{"refs":[{"id":"ref-for-data-recipient"}],"title":"3. Conformance"},{"refs":[{"id":"ref-for-data-recipient\u2460"}],"title":"4.1. Asynchronous Exchange"},{"refs":[{"id":"ref-for-data-recipient\u2461"}],"title":"5.1. Introduction"},{"refs":[{"id":"ref-for-data-recipient\u2462"}],"title":"5.3. Validity Period"},{"refs":[{"id":"ref-for-data-recipient\u2463"}],"title":"6. Product Identification and Classification"},{"refs":[{"id":"ref-for-data-recipient\u2464"}],"title":"6.1. Product Identifier URN\u2019s"},{"refs":[{"id":"ref-for-data-recipient\u2465"}],"title":"7.1. Introduction"},{"refs":[{"id":"ref-for-data-recipient\u2466"},{"id":"ref-for-data-recipient\u2467"}],"title":"7.5. ProductFootprint"},{"refs":[{"id":"ref-for-data-recipient\u2468"}],"title":"7.5.1. Properties"},{"refs":[{"id":"ref-for-data-recipient\u2460\u24ea"}],"title":"8.2. Host System"},{"refs":[{"id":"ref-for-data-recipient\u2460\u2460"}],"title":"8.6. Action ListFootprints"},{"refs":[{"id":"ref-for-data-recipient\u2460\u2461"},{"id":"ref-for-data-recipient\u2460\u2462"}],"title":"8.6.1. Pagination"},{"refs":[{"id":"ref-for-data-recipient\u2460\u2463"},{"id":"ref-for-data-recipient\u2460\u2464"}],"title":"8.8. Action Events"},{"refs":[{"id":"ref-for-data-recipient\u2460\u2465"}],"title":"8.8.4. ProductFootprint Published Event"},{"refs":[{"id":"ref-for-data-recipient\u2460\u2466"}],"title":"8.8.5. Responses"}],"url":"#data-recipient"},
+"data-owner": {"dfnID":"data-owner","dfnText":"Data owner","external":false,"refSections":[{"refs":[{"id":"ref-for-data-owner"}],"title":"4.1. Asynchronous Exchange"},{"refs":[{"id":"ref-for-data-owner\u2460"},{"id":"ref-for-data-owner\u2461"}],"title":"5.1. Introduction"},{"refs":[{"id":"ref-for-data-owner\u2462"}],"title":"6. Product Identification and Classification"},{"refs":[{"id":"ref-for-data-owner\u2463"}],"title":"6.1. Product Identifier URN\u2019s"},{"refs":[{"id":"ref-for-data-owner\u2464"},{"id":"ref-for-data-owner\u2465"}],"title":"7.1. Introduction"},{"refs":[{"id":"ref-for-data-owner\u2466"},{"id":"ref-for-data-owner\u2467"},{"id":"ref-for-data-owner\u2468"}],"title":"7.5. ProductFootprint"},{"refs":[{"id":"ref-for-data-owner\u2460\u24ea"},{"id":"ref-for-data-owner\u2460\u2460"}],"title":"8.2. Host System"},{"refs":[{"id":"ref-for-data-owner\u2460\u2461"},{"id":"ref-for-data-owner\u2460\u2462"}],"title":"8.6. Action ListFootprints"},{"refs":[{"id":"ref-for-data-owner\u2460\u2463"},{"id":"ref-for-data-owner\u2460\u2464"}],"title":"8.8. Action Events"},{"refs":[{"id":"ref-for-data-owner\u2460\u2465"}],"title":"8.8.4. ProductFootprint Published Event"}],"url":"#data-owner"},
+"data-recipient": {"dfnID":"data-recipient","dfnText":"Data recipient","external":false,"refSections":[{"refs":[{"id":"ref-for-data-recipient"}],"title":"3. Conformance"},{"refs":[{"id":"ref-for-data-recipient\u2460"}],"title":"4.1. Asynchronous Exchange"},{"refs":[{"id":"ref-for-data-recipient\u2461"}],"title":"5.1. Introduction"},{"refs":[{"id":"ref-for-data-recipient\u2462"}],"title":"5.3. Validity Period"},{"refs":[{"id":"ref-for-data-recipient\u2463"}],"title":"6. Product Identification and Classification"},{"refs":[{"id":"ref-for-data-recipient\u2464"}],"title":"6.1. Product Identifier URN\u2019s"},{"refs":[{"id":"ref-for-data-recipient\u2465"}],"title":"7.1. Introduction"},{"refs":[{"id":"ref-for-data-recipient\u2466"},{"id":"ref-for-data-recipient\u2467"}],"title":"7.5. ProductFootprint"},{"refs":[{"id":"ref-for-data-recipient\u2468"}],"title":"7.5.1. Properties"},{"refs":[{"id":"ref-for-data-recipient\u2460\u24ea"},{"id":"ref-for-data-recipient\u2460\u2460"}],"title":"8.2. Host System"},{"refs":[{"id":"ref-for-data-recipient\u2460\u2461"}],"title":"8.6. Action ListFootprints"},{"refs":[{"id":"ref-for-data-recipient\u2460\u2462"},{"id":"ref-for-data-recipient\u2460\u2463"}],"title":"8.6.1. Pagination"},{"refs":[{"id":"ref-for-data-recipient\u2460\u2464"},{"id":"ref-for-data-recipient\u2460\u2465"}],"title":"8.8. Action Events"},{"refs":[{"id":"ref-for-data-recipient\u2460\u2466"}],"title":"8.8.4. ProductFootprint Published Event"},{"refs":[{"id":"ref-for-data-recipient\u2460\u2467"}],"title":"8.8.5. Responses"}],"url":"#data-recipient"},
 "element-attrdef-carbonfootprint-aircraftghgemissions": {"dfnID":"element-attrdef-carbonfootprint-aircraftghgemissions","dfnText":"aircraftGhgEmissions","external":false,"refSections":[{"refs":[{"id":"ref-for-element-attrdef-carbonfootprint-aircraftghgemissions"}],"title":"Version 2.2.1-20240430 (Apr 30, 2024)"},{"refs":[{"id":"ref-for-element-attrdef-carbonfootprint-aircraftghgemissions\u2460"}],"title":"Data Model Changes"}],"url":"#element-attrdef-carbonfootprint-aircraftghgemissions"},
 "element-attrdef-carbonfootprint-allocationrulesdescription": {"dfnID":"element-attrdef-carbonfootprint-allocationrulesdescription","dfnText":"allocationRulesDescription","external":false,"refSections":[],"url":"#element-attrdef-carbonfootprint-allocationrulesdescription"},
 "element-attrdef-carbonfootprint-biogenicaccountingmethodology": {"dfnID":"element-attrdef-carbonfootprint-biogenicaccountingmethodology","dfnText":"biogenicAccountingMethodology","external":false,"refSections":[{"refs":[{"id":"ref-for-element-attrdef-carbonfootprint-biogenicaccountingmethodology"}],"title":"Version 2.0.1-20230522 (May 22, 2023)"},{"refs":[{"id":"ref-for-element-attrdef-carbonfootprint-biogenicaccountingmethodology\u2460"}],"title":"Data Model Changes"}],"url":"#element-attrdef-carbonfootprint-biogenicaccountingmethodology"},
