@@ -1,13 +1,3 @@
-html,body {
-    font-family: var(--markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif)
-}
-h1,h2,h3,h4,h5,h6 {
-    font-weight: 500;
-    color: var(--heading-text, #333);
-}
-h1 {
-    border-bottom-width: 0;
-}
 h4 {
     font-size: 1.1em;
     color: var(--heading-text);
@@ -17,6 +7,10 @@ pre,
 code,
 samp {
     font-style: normal;
+}
+
+code {
+    font-size: 0.9em;
 }
 
 li {
@@ -39,17 +33,16 @@ dt>code {
     content: initial;
 }
 
+strong.advisement {
+    text-align: inherit;
+}
+
 .json-schema-type {
     font-family: monospace;
 }
 
 .json-schema-required {
     color: rgba(160, 0, 0, 0.9);
-}
-
-.json-schema-unit {
-    font-style: italic;
-    font-size: 0.9em;
 }
 
 .json-schema-enum code {
@@ -64,3 +57,18 @@ dt>code {
     margin-right: 0px;
     display: inline-block;
 }
+
+.x-unit {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.x-rule {
+    font-style: normal;
+}
+
+.x-methodology {
+    font-style: normal;
+}
+
+
