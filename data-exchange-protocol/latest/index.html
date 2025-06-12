@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>Technical Specifications for PCF Data Exchange (Version 3.0.0)</title>
+  <title>Technical Specifications for PCF Data Exchange (Version 3.0.1)</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 97a1608be, updated Mon Feb 3 16:09:34 2025 -0800" name="generator">
   <link href="https://wbcsd.github.io/tr/data-exchange-protocol/latest/" rel="canonical">
-  <meta content="6011eb23b3d608e53676876d27c7a03b72e9f946" name="revision">
+  <meta content="577658dd918c409faf41a3066ab8a30b71a401a8" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2169,21 +2169,21 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
 }
 </style>
 
-<link href="assets/default.css" rel="stylesheet" />
-<link href="assets/custom.css" rel="stylesheet" />
+<link href="./assets/default.css" rel="stylesheet" />
+<link href="./assets/custom.css" rel="stylesheet" />
 <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">Technical Specifications for PCF Data Exchange (Version 3.0.0)</h1>
+   <h1 class="p-name no-ref" id="title">Technical Specifications for PCF Data Exchange (Version 3.0.1)</h1>
    <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date">Release</h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a href="https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250430/">https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250430/</a>
+     <dd><a href="https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250612/">https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250612/</a>
      <dt>Latest published version:
      <dd><a href="https://wbcsd.github.io/tr/data-exchange-protocol/latest/">https://wbcsd.github.io/tr/data-exchange-protocol/latest/</a>
      <dt>Previous Versions:
-     <dd><a href="https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250224/" rel="prev">https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250224/</a>
+     <dd><a href="https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250430/" rel="prev">https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250430/</a>
      <dt>Feedback:
      <dd><span><a href="mailto:pact@wbcsd.org?subject=%5Bdata-exchange-protocol%5D%20YOUR%20TOPIC%20HERE">pact@wbcsd.org</a> with subject line “<kbd>[data-exchange-protocol] <i data-lt>… message topic …</i></kbd>”</span>
      <dd><a href="https://github.com/wbcsd/data-exchange-protocol/issues/">GitHub</a>
@@ -2272,6 +2272,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li>
      <a href="#changelog"><span class="secno"></span> <span class="content">Appendix A: Changelog</span></a>
      <ol class="toc">
+      <li><a href="#changelog-3.0.1"><span class="secno"></span> <span class="content">Version 3.0.1 (Jun 12, 2025)</span></a>
       <li><a href="#changelog-3.0.0"><span class="secno"></span> <span class="content">Version 3.0.0 (Apr 30, 2025)</span></a>
       <li><a href="#changelog-2.3.0"><span class="secno"></span> <span class="content">Version 2.3.0 (Oct 24, 2024)</span></a>
       <li><a href="#changelog-2.2.1"><span class="secno"></span> <span class="content">Version 2.2.1 (June 24, 2024)</span></a>
@@ -2326,7 +2327,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    <p>WBCSD would like to thank all PACT members, WBCSD staff, and others who shared their detailed and thoughtful input and contributed actively to the development of this document.</p>
    <p>PACT would also like to expressly thank the 40+ solutions which implemented V2 of the PACT Technical Specifications and became conformant during 2023 and 2024, resulting in significant learnings and feedback which is now incorporated in V3.</p>
    <h3 class="heading settled" data-level="1.7" id="section-license"><span class="secno">1.7. </span><span class="content">License</span><a class="self-link" href="#section-license"></a></h3>
-   <p>Refer to the <a href="license">LICENSE</a> for use of this document.</p>
+   <p>Refer to the <a href="license.html">LICENSE</a> for use of this document.</p>
    <h2 class="heading settled" data-level="2" id="terminology"><span class="secno">2. </span><span class="content">Terminology</span><a class="self-link" href="#terminology"></a></h2>
    <dl>
     <dt data-md><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="data-model-extension">Data Model Extension</dfn>
@@ -2777,8 +2778,9 @@ See <code><a data-link-type="element" href="#elementdef-datamodelextension" id="
        </div>
        <p>The unit of measurement of the product. Together with <code>declaredUnitAmount</code> this defines the 'declared unit' of the product. Emissions in this carbon 
 footprint are expressed in kgCO2e per 'declared unit'.</p>
-       <p>For example: a PCF for a 12 liter bottle of Ethanol states 2 kg of CO2e in
-emissions. In this case the declared unit is 12 liter Ethanol, thus the <code>declaredUnitOfMeasurement</code> is "liter", and the <code>declaredUnitAmount</code> is 12.</p>
+       <p>For example: a PCF for a 12.5 liter bottle of Ethanol states 2 kg of CO2e in
+emissions. In this case the declared unit is 12.5 liter Ethanol, thus the <code>declaredUnitOfMeasurement</code> is "liter", and the <code>declaredUnitAmount</code> is "12.5".
+The <code>pcfIncludingBiogenicUptake</code> is "2.0" kgCO2e per "12.5 liter" of Ethanol.</p>
        <div class="x-methodology">Methodology section 3.2.4</div>
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-declaredunitamount"><code>declaredUnitAmount</code></dfn>
@@ -3137,10 +3139,7 @@ IPCC report version number and MUST be an integer.</p>
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-for="CarbonFootprint" data-dfn-type="element-attr" data-export id="element-attrdef-carbonfootprint-crosssectoralstandards"><code>crossSectoralStandards</code></dfn>
       <td>
-       <div class="json-schema-type">
-        <span class="json-schema-required">required</span> array of string &lt;enum>
-        <div class="json-schema-enum"> <code>"ISO14067"</code> <code>"ISO14083"</code> <code>"ISO14040-44"</code> <code>"GHGP-Product"</code> <code>"PEF"</code> <code>"PACT-1.0"</code> <code>"PACT-2.0"</code> <code>"PACT-3.0"</code> </div>
-       </div>
+       <div class="json-schema-type"><span class="json-schema-required">required</span> array of string</div>
        <p>The cross-sectoral standards applied for calculating or allocating <a data-link-type="dfn" href="#ghg" id="ref-for-ghg">GHG</a> emissions.</p>
        <p>It MUST be a non-empty array and SHOULD contain only the following values without duplicates:</p>
        <dl>
@@ -3667,8 +3666,33 @@ after advancing in the pagination process.</p>
    <p>The <a data-link-type="dfn" href="#host-system" id="ref-for-host-system①⑤">host system</a> MUST support filtering of the list of footprints by
 criteria described under Parameters. Note that these are the same filters 
 used by the <a href="#request-created-event">§ 5.8.1 Request Created Event</a> Event.</p>
-   <p>A host system MAY provide additional filter criteria for the data recipient
-to use. These parameters MUST be prefixed with <code>x-&lt;identifier>-</code>.</p>
+   <p>Most criteria (like <code>productId</code>, <code>geography</code>, etc.) can contain multiple
+values. Each footprint in the resulting list MUST match for EACH single 
+criterion at least ONE value.</p>
+   <p>So, the filtering logic is as follows:</p>
+   <ul>
+    <li data-md>
+     <p>For each filter criterion (e.g., <code>productId</code>, <code>geography</code>, <code>classification</code>), if multiple values are provided, the filter matches if the footprint matches at least one of the values for that criterion (logical OR within a criterion).</p>
+    <li data-md>
+     <p>Across different criteria, a footprint must match all specified criteria (logical AND between criteria).</p>
+   </ul>
+   <p>In other words:</p>
+   <ul>
+    <li data-md>
+     <p>Within a single criterion: values are combined with OR.</p>
+    <li data-md>
+     <p>Between different criteria: criteria are combined with AND.</p>
+   </ul>
+   <p>For example, the query string for <code>ListFootprints</code></p>
+<pre class="language-http highlight">?productId=x&amp;productid=y&amp;productid=z&amp;geography=DE&amp;geography=FR&amp;validon=2025-04-01T00:00Z 
+</pre>
+   <p>translates to the following logic:</p>
+<pre>(productId='x' OR productId='y' OR productId='z') AND
+(geography='DE' OR geography='FR') AND
+(validOn='2025-04-01T00:00Z')
+</pre>
+   <p>Additionally, a host system MAY provide additional filter criteria for the data
+recipient to use. These parameters MUST be prefixed with <code>x-&lt;identifier>-</code>.</p>
    <p>For example, to add functionality to search for product
 footprints based on an invoice number, a software solution could choose 
 to support a parameter <code>x-atq-invoice-id</code>.</p>
@@ -3713,18 +3737,18 @@ additional ProductFootprints ready to be retrieved.</p>
       <td><dfn class="dfn-paneled" data-dfn-for="listfootprints" data-dfn-type="element-attr" data-export id="element-attrdef-listfootprints-validon"><code>validOn</code></dfn> (query)
       <td>
        <div class="json-schema-type">string &lt;date-time></div>
-       <p>If present, MUST match all PCFs which were valid on the date specified: validityPeriodStart &lt;= validOn &lt;= validityPeriodEnd. See <a href="#validity-period">§ 7.3 Validity Period</a> for determining validity period.</p>
+       <p>If present, MUST match all PCFs which were valid on the date specified: start validity period &lt;= validOn &lt;= end validity period. See <a href="#validity-period">§ 7.3 Validity Period</a> for determining validity period.</p>
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-for="listfootprints" data-dfn-type="element-attr" data-export id="element-attrdef-listfootprints-validafter"><code>validAfter</code></dfn> (query)
       <td>
        <div class="json-schema-type">string &lt;date-time></div>
-       <p>If present, MUST match PCFs with validityPeriodStart > validAfter.
+       <p>If present, MUST match PCFs with a validity period start > validAfter.
 See <a href="#validity-period">§ 7.3 Validity Period</a> for determining validity period.</p>
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-for="listfootprints" data-dfn-type="element-attr" data-export id="element-attrdef-listfootprints-validbefore"><code>validBefore</code></dfn> (query)
       <td>
        <div class="json-schema-type">string &lt;date-time></div>
-       <p>If present, MUST match PCFs with validityPeriodEnd &lt; validBefore
+       <p>If present, MUST match PCFs with a validity period end &lt; validBefore
 See <a href="#validity-period">§ 7.3 Validity Period</a> for determining validity period.</p>
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-for="listfootprints" data-dfn-type="element-attr" data-export id="element-attrdef-listfootprints-status"><code>status</code></dfn> (query)
@@ -3917,7 +3941,8 @@ and SHOULD return an empty response body.</p>
 MUST provide the criteria in the data object to enable the data owner to either
 find an existing relevant PCF or create a new one.</p>
    <p>Criteria to provide can be product id, geography, company identifier, validity
-period, etc, see below for details.</p>
+period, etc, see below for details.
+For filtering logic, see <a href="#filtering">§ 5.6.2 Filtering</a>.</p>
    <p>If the data owner can <em>immediately</em> determine that it will not be able to
 handle this request it MUST respond with an appropriate <code>4xx</code> error response, 
 otherwise it MUST respond with a <code>200</code> (Success), indicating it will
@@ -3987,18 +4012,18 @@ This follow up event MUST be either a <code>RequestFulfilledEvent</code> or <cod
       <td><code>data.validOn</code>
       <td>
        <div class="json-schema-type">string &lt;date-time></div>
-       <p>If present, MUST match all PCFs which were valid on the date specified: validityPeriodStart &lt;= validOn &lt;= validityPeriodEnd. See <a href="#validity-period">§ 7.3 Validity Period</a> for determining validity period.</p>
+       <p>If present, MUST match all PCFs which were valid on the date specified: start validity period &lt;= validOn &lt;= end validity period. See <a href="#validity-period">§ 7.3 Validity Period</a> for determining validity period.</p>
      <tr>
       <td><code>data.validAfter</code>
       <td>
        <div class="json-schema-type">string &lt;date-time></div>
-       <p>If present, MUST match PCFs with validityPeriodStart > validAfter.
+       <p>If present, MUST match PCFs with a validity period start > validAfter.
 See <a href="#validity-period">§ 7.3 Validity Period</a> for determining validity period.</p>
      <tr>
       <td><code>data.validBefore</code>
       <td>
        <div class="json-schema-type">string &lt;date-time></div>
-       <p>If present, MUST match PCFs with validityPeriodEnd &lt; validBefore
+       <p>If present, MUST match PCFs with a validity period end &lt; validBefore
 See <a href="#validity-period">§ 7.3 Validity Period</a> for determining validity period.</p>
      <tr>
       <td><code>data.status</code>
@@ -4611,8 +4636,8 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
    <h2 class="heading settled" data-level="9" id="api-examples"><span class="secno">9. </span><span class="content">Examples</span><a class="self-link" href="#api-examples"></a></h2>
    <div class="note" role="note">Non-normative</div>
    <h3 class="heading settled" data-level="9.1" id="api-action-list-example"><span class="secno">9.1. </span><span class="content">Example Action ListFootprints</span><a class="self-link" href="#api-action-list-example"></a></h3>
-   <div class="example" id="example-c0e09853">
-    <a class="self-link" href="#example-c0e09853"></a> 
+   <div class="example" id="example-81b11963">
+    <a class="self-link" href="#example-81b11963"></a> 
     <p>Request:</p>
 <pre class="language-http highlight"><c- nf>GET</c-> <c- nn>/3/footprints?limit=10</c-> <c- kr>HTTP</c-><c- o>/</c-><c- m>2</c->
 <c- e>host</c-><c- o>:</c-> <c- l>api.example.org</c->
@@ -4630,7 +4655,6 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
     <c- p>{</c->
       <c- f>"id"</c-><c- p>:</c-> <c- u>"91715e5e-fd0b-4d1c-8fab-76290c46e6ed"</c-><c- p>,</c->
       <c- f>"specVersion"</c-><c- p>:</c-> <c- u>"3.0.0"</c-><c- p>,</c->
-      <c- f>"version"</c-><c- p>:</c-> <c- mi>1</c-><c- p>,</c->
       <c- f>"created"</c-><c- p>:</c-> <c- u>"2025-03-01T09:32:20Z"</c-><c- p>,</c->
       <c- f>"status"</c-><c- p>:</c-> <c- u>"Active"</c-><c- p>,</c->
       <c- f>"validityPeriodStart"</c-><c- p>:</c-> <c- u>"2025-03-01T09:32:20Z"</c-><c- p>,</c->
@@ -4717,8 +4741,8 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
 </pre>
    </div>
    <h3 class="heading settled" data-level="9.2" id="api-action-get-example"><span class="secno">9.2. </span><span class="content">Example Action GetFootprint</span><a class="self-link" href="#api-action-get-example"></a></h3>
-   <div class="example" id="example-2ecfc85f">
-    <a class="self-link" href="#example-2ecfc85f"></a> 
+   <div class="example" id="example-71240f2f">
+    <a class="self-link" href="#example-71240f2f"></a> 
     <p>Request:</p>
 <pre class="language-http highlight"><c- nf>GET</c-> <c- nn>/3/footprints/91715e5e-fd0b-4d1c-8fab-76290c46e6ed</c-> <c- kr>HTTP</c-><c- o>/</c-><c- m>2</c->
 <c- e>host</c-><c- o>:</c-> <c- l>api.example.org</c->
@@ -4733,7 +4757,6 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
   <c- f>"data"</c-><c- p>:</c-> <c- p>{</c->
     <c- f>"id"</c-><c- p>:</c-> <c- u>"91715e5e-fd0b-4d1c-8fab-76290c46e6ed"</c-><c- p>,</c->
     <c- f>"specVersion"</c-><c- p>:</c-> <c- u>"3.0.0"</c-><c- p>,</c->
-    <c- f>"version"</c-><c- p>:</c-> <c- mi>1</c-><c- p>,</c->
     <c- f>"created"</c-><c- p>:</c-> <c- u>"2024-03-01T09:32:20Z"</c-><c- p>,</c->
     <c- f>"status"</c-><c- p>:</c-> <c- u>"Active"</c-><c- p>,</c->
     <c- f>"validityPeriodStart"</c-><c- p>:</c-> <c- u>"2024-03-01T09:32:20Z"</c-><c- p>,</c->
@@ -4838,8 +4861,8 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
    </div>
    <h3 class="heading settled" data-level="9.4" id="api-action-events-example"><span class="secno">9.4. </span><span class="content">Example Action Events</span><a class="self-link" href="#api-action-events-example"></a></h3>
    <p>Example <strong>ProductFootprint.RequestCreated</strong></p>
-   <div class="example" id="example-bf6ebcab">
-    <a class="self-link" href="#example-bf6ebcab"></a> 
+   <div class="example" id="example-78503901">
+    <a class="self-link" href="#example-78503901"></a> 
     <p>Request:</p>
 <pre class="language-http highlight"><c- nf>POST</c-> <c- nn>/3/events</c-> <c- kr>HTTP</c-><c- o>/</c-><c- m>1.1</c->
 <c- e>host</c-><c- o>:</c-> <c- l>api.example.org</c->
@@ -4847,7 +4870,7 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
 <c- e>content-type</c-><c- o>:</c-> <c- l>application/cloudevents+json; charset=UTF-8</c->
 </pre>
 <pre class="language-json highlight"><c- p>{</c->
-  <c- f>"type"</c-><c- p>:</c-> <c- u>"org.wbcsd.pact.ProductFootprint.RequestCreated.3"</c-><c- p>,</c->
+  <c- f>"type"</c-><c- p>:</c-> <c- u>"org.wbcsd.pact.ProductFootprint.RequestCreatedEvent.3"</c-><c- p>,</c->
   <c- f>"specversion"</c-><c- p>:</c-> <c- u>"1.0"</c-><c- p>,</c->
   <c- f>"id"</c-><c- p>:</c-> <c- u>"848dcf00-2c18-400d-bcb8-11e45bbf7ebd"</c-><c- p>,</c->
   <c- f>"source"</c-><c- p>:</c-> <c- u>"//api.recipient.org/3/events"</c-><c- p>,</c->
@@ -4865,8 +4888,8 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
 </pre>
    </div>
    <p>Example <strong>ProductFootprint.RequestFulfilled</strong></p>
-   <div class="example" id="example-692a9868">
-    <a class="self-link" href="#example-692a9868"></a> 
+   <div class="example" id="example-d68de046">
+    <a class="self-link" href="#example-d68de046"></a> 
     <p>Request:</p>
 <pre class="language-http highlight"><c- nf>POST</c-> <c- nn>/3/events</c-> <c- kr>HTTP</c-><c- o>/</c-><c- m>1.1</c->
 <c- e>host</c-><c- o>:</c-> <c- l>api.recipient.org</c->
@@ -4885,7 +4908,6 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
       <c- p>{</c->
         <c- f>"id"</c-><c- p>:</c-> <c- u>"91715e5e-fd0b-4d1c-8fab-76290c46e6ed"</c-><c- p>,</c->
         <c- f>"specVersion"</c-><c- p>:</c-> <c- u>"3.0.0"</c-><c- p>,</c->
-        <c- f>"version"</c-><c- p>:</c-> <c- mi>1</c-><c- p>,</c->
         <c- f>"created"</c-><c- p>:</c-> <c- u>"2024-03-01T09:32:20Z"</c-><c- p>,</c->
         <c- f>"status"</c-><c- p>:</c-> <c- u>"Active"</c-><c- p>,</c->
         <c- f>"validityPeriodStart"</c-><c- p>:</c-> <c- u>"2024-03-01T09:32:20Z"</c-><c- p>,</c->
@@ -4975,6 +4997,22 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
 </pre>
    </div>
    <h2 class="heading settled" id="changelog"><span class="content">Appendix A: Changelog</span><a class="self-link" href="#changelog"></a></h2>
+   <h3 class="heading settled" id="changelog-3.0.1"><span class="content">Version 3.0.1 (Jun 12, 2025)</span><a class="self-link" href="#changelog-3.0.1"></a></h3>
+   <p>Patch release with clarifications after feedback:</p>
+   <ul>
+    <li data-md>
+     <p>Expanded on <a href="#filtering">filtering logic</a></p>
+    <li data-md>
+     <p>Clarified description of <a href="#parameters">filtering parameters</a>.</p>
+    <li data-md>
+     <p>Added extra examples.</p>
+    <li data-md>
+     <p>Removed invalid geography properties in some examples.</p>
+    <li data-md>
+     <p>Expanded on <code>declaredUnitofMeasurement</code> description.</p>
+    <li data-md>
+     <p>Added removal of <code>biogenicAccountingMethodology</code> to changelog of <a href="#changelog-3.0.0">3.0.0</a></p>
+   </ul>
    <h3 class="heading settled" id="changelog-3.0.0"><span class="content">Version 3.0.0 (Apr 30, 2025)</span><a class="self-link" href="#changelog-3.0.0"></a></h3>
    <p>Summary of major changes since version 2.3:</p>
    <ol>
@@ -5102,6 +5140,8 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
        <p><code>CarbonFootprint/crossSectoralStandardsUsed</code> (deprecated in 2.3, replaced by <code>CarbonFootprint/crossSectoralStandards</code>)</p>
       <li data-md>
        <p><code>CarbonFootprint/characterizationFactors</code> (deprecated in 2.2, replaced by <code>CarbonFootprint/ipccCharacterizationFactors</code>)</p>
+      <li data-md>
+       <p><code>CarbonFootprint/biogenicAccountingMethodology</code> (removed, superseded by <code>CarbonFootprint/crossSectoralStandards</code> and description in <code>ProductFootprint/comment</code> )</p>
       <li data-md>
        <p><code>CarbonFootprint/uncertaintyAssessmentDescription</code></p>
       <li data-md>
