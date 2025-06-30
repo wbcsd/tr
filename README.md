@@ -12,12 +12,15 @@ The `tr` repository’s goals are:
 Since this repository is a collection of releases, it only includes `html` and `svg` files. All files used in the generation of these are kept solely in the `wbcsd/data-exchange-protocol` repo.
 
 
+
 ## Stable Links
 For reference, this repository establishes the following stable links
 
-Framework
-* Latest version of framework: https://wbcsd.github.io/tr/framework/framework.pdf
-* Framework v2: https://wbcsd.github.io/tr/2023/framework-20232601/framework.pdf
+### Methodology
+* PACT Methodology v3: https://wbcsd.github.io/tr/methodology/3.0/pact-methodology-v3.0.pdf
+* PACT Framework v2: https://wbcsd.github.io/tr/methodology/2.0/framework.pdf
 
-Tech Specs
-* Latest version of tech specs: https://wbcsd.github.io/data-exchange-protocol/v2/
+### Tech Specs
+* Latest release of tech specs: https://wbcsd.github.io/tr/data-exchange-protocol/latest/
+* Editor version of tech specs: https://wbcsd.github.io/data-exchange-protocol/v3/
+
