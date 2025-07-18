@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>Technical Specifications for PCF Data Exchange (Version 3.0.1)</title>
+  <title>Technical Specifications for PCF Data Exchange (Version 3.0.2)</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 97a1608be, updated Mon Feb 3 16:09:34 2025 -0800" name="generator">
   <link href="https://wbcsd.github.io/tr/data-exchange-protocol/latest/" rel="canonical">
-  <meta content="577658dd918c409faf41a3066ab8a30b71a401a8" name="revision">
+  <meta content="e32834a86d7778370cc069e4fb5fde296c0111cb" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2174,12 +2174,12 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
 <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">Technical Specifications for PCF Data Exchange (Version 3.0.1)</h1>
+   <h1 class="p-name no-ref" id="title">Technical Specifications for PCF Data Exchange (Version 3.0.2)</h1>
    <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date">Release</h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a href="https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250612/">https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250612/</a>
+     <dd><a href="https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250718/">https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250718/</a>
      <dt>Latest published version:
      <dd><a href="https://wbcsd.github.io/tr/data-exchange-protocol/latest/">https://wbcsd.github.io/tr/data-exchange-protocol/latest/</a>
      <dt>Previous Versions:
@@ -2272,6 +2272,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li>
      <a href="#changelog"><span class="secno"></span> <span class="content">Appendix A: Changelog</span></a>
      <ol class="toc">
+      <li><a href="#changelog-3.0.2"><span class="secno"></span> <span class="content">Version 3.0.2 (July 18, 2025)</span></a>
       <li><a href="#changelog-3.0.1"><span class="secno"></span> <span class="content">Version 3.0.1 (Jun 12, 2025)</span></a>
       <li><a href="#changelog-3.0.0"><span class="secno"></span> <span class="content">Version 3.0.0 (Apr 30, 2025)</span></a>
       <li><a href="#changelog-2.3.0"><span class="secno"></span> <span class="content">Version 2.3.0 (Oct 24, 2024)</span></a>
@@ -3094,7 +3095,7 @@ technological CO2 capture origin data point for the PCF.</p>
       <td>
        <div class="json-schema-type">string &lt;decimal></div>
        <p>CO2 removed directly from the atmosphere or via biogenic CO2 capture. Subject to reporting requirements.</p>
-       <div class="x-unit">kgCO2e/declared unit, >= 0</div>
+       <div class="x-unit">kgCO2e/declared unit, &lt;= 0</div>
        <div class="x-rule"><a href="#reporting-rules">CCS</a></div>
        <div class="x-methodology">Methodology section 3.3.2.5</div>
      <tr>
@@ -4407,14 +4408,16 @@ must provide a way for data recipients to filter the resulting list, with a mini
     <li data-md>
      <p>The data owner will authenticate with the data recipient and send either a <code>RequestFullfilledEvent</code> back with the PCF or a <code>RequestRejectedEvent</code> if it can not produce the PCF.</p>
    </ol>
-   <h4 class="heading settled" data-level="6.2.2" id="sending-an-updated-pcf"><span class="secno">6.2.2. </span><span class="content">Sending an updated PCF</span><a class="self-link" href="#sending-an-updated-pcf"></a></h4>
+   <h4 class="heading settled" data-level="6.2.2" id="publishing-updates"><span class="secno">6.2.2. </span><span class="content">Publishing updates</span><a class="self-link" href="#publishing-updates"></a></h4>
    <p>At any time after a data owner has sent a PCF to the data recipient, the data owner can send an update, for example because a PCF was updated or deprecated, or a new PCF was published, see <a href="#lifecycle">§ 7 Product Footprint Lifecycle</a>.</p>
    <p>In this case the data owner sends a <code>PublishedEvent</code> to the data recipient.</p>
    <ol>
     <li data-md>
-     <p>The data owner authenticates with the data recipient and sends a <code>PublishedEvent</code> with the updated or created PCF.</p>
+     <p>The data owner authenticates with the data recipient and sends a <code>PublishedEvent</code> with one or more IDs of the updated or created PCF(s).</p>
     <li data-md>
      <p>The data recipient should validate this incoming event and directly return a status code indicating succesful receipt (HTTP code 2xx) or an error (HTTP 4xx or 5xx).</p>
+    <li data-md>
+     <p>Afterwards the data recipient can use GetFootprint for each of the prodived IDs to retrieve the updated PCFs</p>
    </ol>
    <p>Refer to <a href="#action-events">§ 5.8 Action Events</a> for detailed request and response formats.</p>
    <h2 class="heading settled" data-level="7" id="lifecycle"><span class="secno">7. </span><span class="content">Product Footprint Lifecycle</span><a class="self-link" href="#lifecycle"></a></h2>
@@ -4997,6 +5000,14 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
 </pre>
    </div>
    <h2 class="heading settled" id="changelog"><span class="content">Appendix A: Changelog</span><a class="self-link" href="#changelog"></a></h2>
+   <h3 class="heading settled" id="changelog-3.0.2"><span class="content">Version 3.0.2 (July 18, 2025)</span><a class="self-link" href="#changelog-3.0.2"></a></h3>
+   <p>Patch release with fix after feedback:</p>
+   <ul>
+    <li data-md>
+     <p>Correct sign (&lt;=0) of <code>technologicalCO2Removals</code></p>
+    <li data-md>
+     <p>Expanded text on <a href="#publishing-updates">Asynchronous Updates</a></p>
+   </ul>
    <h3 class="heading settled" id="changelog-3.0.1"><span class="content">Version 3.0.1 (Jun 12, 2025)</span><a class="self-link" href="#changelog-3.0.1"></a></h3>
    <p>Patch release with clarifications after feedback:</p>
    <ul>
