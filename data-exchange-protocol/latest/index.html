@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>Technical Specifications for PCF Data Exchange (Version 3.0.2)</title>
+  <title>Technical Specifications for PCF Data Exchange (Version 3.0.3)</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 97a1608be, updated Mon Feb 3 16:09:34 2025 -0800" name="generator">
   <link href="https://wbcsd.github.io/tr/data-exchange-protocol/latest/" rel="canonical">
-  <meta content="e32834a86d7778370cc069e4fb5fde296c0111cb" name="revision">
+  <meta content="25d27d7227d7fe23ba6a481abc780a74afeb6858" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2174,12 +2174,12 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
 <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">Technical Specifications for PCF Data Exchange (Version 3.0.2)</h1>
+   <h1 class="p-name no-ref" id="title">Technical Specifications for PCF Data Exchange (Version 3.0.3)</h1>
    <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date">Release</h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a href="https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250718/">https://wbcsd.github.io/tr/2025/data-exchange-protocol-20250718/</a>
+     <dd><a href="https://wbcsd.github.io/tr/2025/data-exchange-protocol-20251118/">https://wbcsd.github.io/tr/2025/data-exchange-protocol-20251118/</a>
      <dt>Latest published version:
      <dd><a href="https://wbcsd.github.io/tr/data-exchange-protocol/latest/">https://wbcsd.github.io/tr/data-exchange-protocol/latest/</a>
      <dt>Previous Versions:
@@ -2187,6 +2187,13 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      <dt>Feedback:
      <dd><span><a href="mailto:pact@wbcsd.org?subject=%5Bdata-exchange-protocol%5D%20YOUR%20TOPIC%20HERE">pact@wbcsd.org</a> with subject line “<kbd>[data-exchange-protocol] <i data-lt>… message topic …</i></kbd>”</span>
      <dd><a href="https://github.com/wbcsd/data-exchange-protocol/issues/">GitHub</a>
+     <dt class="editor">Editor:
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://www.wbcsd.org">Gertjan Schuurmans (WBCSD)</a> <a class="u-email email" href="mailto:schuurmans@wbcsd.org">schuurmans@wbcsd.org</a>
+     <dt class="editor">Former Editors:
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://www.wbcsd.org">Beth Hadley (WBCSD)</a> <a class="u-email email" href="mailto:hadley@wbcsd.org">hadley@wbcsd.org</a>
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://sine.foundation">Martin Pompéry (SINE Foundation)</a> <a class="u-email email" href="mailto:martin@sine.foundation">martin@sine.foundation</a>
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://www.wbcsd.org">Cecilia Valeri (WBCSD)</a> <a class="u-email email" href="mailto:valeri@wbcsd.org">valeri@wbcsd.org</a>
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://sine.foundation">Raimundo Henriques (SINE Foundation)</a> <a class="u-email email" href="mailto:raimundo@sine.foundation">raimundo@sine.foundation</a>
     </dl>
    </div>
    <div data-fill-with="warning"></div>
@@ -2272,6 +2279,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li>
      <a href="#changelog"><span class="secno"></span> <span class="content">Appendix A: Changelog</span></a>
      <ol class="toc">
+      <li><a href="#changelog-3.0.3"><span class="secno"></span> <span class="content">Version 3.0.3 (November 18, 2025)</span></a>
       <li><a href="#changelog-3.0.2"><span class="secno"></span> <span class="content">Version 3.0.2 (July 18, 2025)</span></a>
       <li><a href="#changelog-3.0.1"><span class="secno"></span> <span class="content">Version 3.0.1 (Jun 12, 2025)</span></a>
       <li><a href="#changelog-3.0.0"><span class="secno"></span> <span class="content">Version 3.0.0 (Apr 30, 2025)</span></a>
@@ -3283,9 +3291,9 @@ been verified in line with <a data-link-type="dfn" href="#pact-methodology" id="
       <th>Description
     <tbody>
      <tr>
-      <td><dfn class="dfn-paneled" data-dfn-for="DataModelExtension" data-dfn-type="element-attr" data-export id="element-attrdef-datamodelextension-specversion"><code>specversion</code></dfn>
+      <td><dfn class="dfn-paneled" data-dfn-for="DataModelExtension" data-dfn-type="element-attr" data-export id="element-attrdef-datamodelextension-specversion"><code>specVersion</code></dfn>
       <td>
-       <div class="json-schema-type">string</div>
+       <div class="json-schema-type"><span class="json-schema-required">required</span> string</div>
        <p>The version of the Data Model Extension specification. The value
 MUST be a string in the format major.minor.patch as defined in 
 Semantic Versioning 2.0.0.</p>
@@ -3556,7 +3564,8 @@ the role of <a data-link-type="dfn" href="#data-owner" id="ref-for-data-owner⑥
     <li>Logging: creation and storage of access logs and audit trails related to data exchange, authentication processes, etc.
    </ol>
    <h3 class="heading settled" data-level="5.4" id="api-error-handling"><span class="secno">5.4. </span><span class="content">Error Handling</span><a class="self-link" href="#api-error-handling"></a></h3>
-   <p>The actions <a href="#action-getfootprint">GetFootprint</a>, <a href="#action-listfootprints">ListFootprints</a> and <a href="#action-events">Events</a> MUST return an appropriate HTTP status code and MUST include a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error">Error</a></code> object with information on the error.</p>
+   <p>The actions <a href="#action-getfootprint">GetFootprint</a>, <a href="#action-listfootprints">ListFootprints</a> and <a href="#action-events">Events</a> MUST return an appropriate HTTP status code.
+In addition, these actions MUST return a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error">Error</a></code> object with more information, except when the error is releated to authentication, in which case it is RECOMMENDED to include an <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①">Error</a></code> object, if possible. The reason for this is that authentication infrastructure can reside outside of the host system, so there is might be no control over the error messages.</p>
    <p>Error responses are specified in detail such that data recipients can understand the cause of the error, and so that potentially host systems can act on and resolve errors automatically.</p>
    <p>Error responses from <a href="#api-auth">Action Authenticate</a> follow the OAuth specification <a data-link-type="biblio" href="#biblio-rfc6750" title="The OAuth 2.0 Authorization Framework: Bearer Token Usage">[rfc6750]</a>. See <a href="#api-auth">§ 5.5 Authentication Flow</a></p>
    <h3 class="heading settled" data-level="5.5" id="api-auth"><span class="secno">5.5. </span><span class="content">Authentication Flow</span><a class="self-link" href="#api-auth"></a></h3>
@@ -3805,22 +3814,22 @@ JSON array. The list MUST NOT be NULL.</p>
       <td><strong>400</strong>
       <td>
        Bad request. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①">Error</a></code> object</p>
+       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error②">Error</a></code> object, except when the error is related to authentication, see <a href="#api-error-handling">§ 5.4 Error Handling</a>.</p>
      <tr>
       <td><strong>401</strong>
       <td>
        The request is not authorized, the access token is invalid or has expired. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error②">Error</a></code> object</p>
+       <p>Response body SHOULD contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error③">Error</a></code> object, see <a href="#api-error-handling">§ 5.4 Error Handling</a>.</p>
      <tr>
       <td><strong>403</strong>
       <td>
        Access Denied. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error③">Error</a></code> object</p>
+       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error④">Error</a></code> object</p>
      <tr>
       <td><strong>500</strong>
       <td>
        Internal Error. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error④">Error</a></code> object</p>
+       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error⑤">Error</a></code> object</p>
    </table>
    <h3 class="heading settled" data-level="5.7" id="action-getfootprint"><span class="secno">5.7. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="action-getfootprint①">Action GetFootprint</dfn></span><a class="self-link" href="#action-getfootprint"></a></h3>
 <pre class="language-HTTP highlight">GET /3/footprints/{id}
@@ -3883,27 +3892,27 @@ by the host system.
       <td><strong>400</strong>
       <td>
        Bad request. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error⑤">Error</a></code> object</p>
+       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error⑥">Error</a></code> object, except when the error is related to authentication, see <a href="#api-error-handling">§ 5.4 Error Handling</a>.</p>
      <tr>
       <td><strong>401</strong>
       <td>
        The request is not authorized, the access token is invalid or has expired. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error⑥">Error</a></code> object</p>
+       <p>Response body SHOULD contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error⑦">Error</a></code> object, see <a href="#api-error-handling">§ 5.4 Error Handling</a>.</p>
      <tr>
       <td><strong>403</strong>
       <td>
        The data recipient is not allowed to access the requested ProductFootprint. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error⑦">Error</a></code> object</p>
+       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error⑧">Error</a></code> object</p>
      <tr>
       <td><strong>404</strong>
       <td>
        The requested ProductFootprint was not found. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error⑧">Error</a></code> object</p>
+       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error⑨">Error</a></code> object</p>
      <tr>
       <td><strong>500</strong>
       <td>
        Internal Error. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error⑨">Error</a></code> object</p>
+       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①⓪">Error</a></code> object</p>
    </table>
    <h3 class="heading settled" data-level="5.8" id="action-events"><span class="secno">5.8. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="action-events①">Action Events</dfn></span><a class="self-link" href="#action-events"></a></h3>
 <pre class="language-HTTP highlight">POST /3/events
@@ -4208,7 +4217,7 @@ strategy. It SHOULD abandon sending the event after 72 hours.</p>
      <tr>
       <td><code>data.error</code>
       <td>
-       <div class="json-schema-type"><code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①⓪">Error</a></code></div>
+       <div class="json-schema-type"><code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①①">Error</a></code></div>
        <p>Object with error code and description, to be returned by the API methods in case of error.
 See <a href="#api-error-handling">§ 5.4 Error Handling</a> for details.</p>
    </table>
@@ -4322,22 +4331,22 @@ body will be empty.
       <td><strong>400</strong>
       <td>
        Bad request. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①①">Error</a></code> object</p>
+       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①②">Error</a></code> object, except when the error is related to authentication, see <a href="#api-error-handling">§ 5.4 Error Handling</a>.</p>
      <tr>
       <td><strong>401</strong>
       <td>
        The request is not authorized, the access token is invalid or has expired. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①②">Error</a></code> object</p>
+       <p>Response body SHOULD contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①③">Error</a></code> object, see <a href="#api-error-handling">§ 5.4 Error Handling</a>.</p>
      <tr>
       <td><strong>403</strong>
       <td>
        Access Denied. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①③">Error</a></code> object</p>
+       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①④">Error</a></code> object</p>
      <tr>
       <td><strong>500</strong>
       <td>
        Internal Error. 
-       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①④">Error</a></code> object</p>
+       <p>Response body MUST contain a JSON <code><a data-link-type="element" href="#elementdef-error" id="ref-for-elementdef-error①⑤">Error</a></code> object</p>
    </table>
    <h2 class="heading settled" data-level="6" id="exchanging-footprints"><span class="secno">6. </span><span class="content">Exchanging Footprints</span><a class="self-link" href="#exchanging-footprints"></a></h2>
    <p class="note" role="note"><span class="marker">Note:</span> This chapter is non-normative.</p>
@@ -5000,6 +5009,12 @@ ProductFootprint is declared as valid for use by a receiving <a data-link-type="
 </pre>
    </div>
    <h2 class="heading settled" id="changelog"><span class="content">Appendix A: Changelog</span><a class="self-link" href="#changelog"></a></h2>
+   <h3 class="heading settled" id="changelog-3.0.3"><span class="content">Version 3.0.3 (November 18, 2025)</span><a class="self-link" href="#changelog-3.0.3"></a></h3>
+   <p>Patch release:</p>
+   <ul>
+    <li data-md>
+     <p>Less stringent demands for inclusion of a JSON error body (ADR-50) in authentication related responses. See <a href="#api-error-handling">§ 5.4 Error Handling</a></p>
+   </ul>
    <h3 class="heading settled" id="changelog-3.0.2"><span class="content">Version 3.0.2 (July 18, 2025)</span><a class="self-link" href="#changelog-3.0.2"></a></h3>
    <p>Patch release with fix after feedback:</p>
    <ul>
@@ -5768,8 +5783,12 @@ based on the <code>/auth/token</code> syntax.</p>
    <li><a href="#element-attrdef-carbonfootprint-secondaryemissionfactorsources">secondaryEmissionFactorSources</a><span>, in § 4.7.2</span>
    <li><a href="#solution">Solution</a><span>, in § 2</span>
    <li><a href="#solution-provider">Solution Provider</a><span>, in § 2</span>
-   <li><a href="#element-attrdef-productfootprint-specversion">specVersion</a><span>, in § 4.6.1</span>
-   <li><a href="#element-attrdef-datamodelextension-specversion">specversion</a><span>, in § 4.8.1</span>
+   <li>
+    specVersion
+    <ul>
+     <li><a href="#element-attrdef-datamodelextension-specversion">element-attr for DataModelExtension</a><span>, in § 4.8.1</span>
+     <li><a href="#element-attrdef-productfootprint-specversion">element-attr for ProductFootprint</a><span>, in § 4.6.1</span>
+    </ul>
    <li><a href="#element-attrdef-verification-standardname">standardName</a><span>, in § 4.12.1</span>
    <li>
     status
@@ -6089,7 +6108,7 @@ let dfnPanelData = {
 "element-attrdef-datamodelextension-data": {"dfnID":"element-attrdef-datamodelextension-data","dfnText":"data","external":false,"refSections":[],"url":"#element-attrdef-datamodelextension-data"},
 "element-attrdef-datamodelextension-dataschema": {"dfnID":"element-attrdef-datamodelextension-dataschema","dfnText":"dataSchema","external":false,"refSections":[],"url":"#element-attrdef-datamodelextension-dataschema"},
 "element-attrdef-datamodelextension-documentation": {"dfnID":"element-attrdef-datamodelextension-documentation","dfnText":"documentation","external":false,"refSections":[],"url":"#element-attrdef-datamodelextension-documentation"},
-"element-attrdef-datamodelextension-specversion": {"dfnID":"element-attrdef-datamodelextension-specversion","dfnText":"specversion","external":false,"refSections":[],"url":"#element-attrdef-datamodelextension-specversion"},
+"element-attrdef-datamodelextension-specversion": {"dfnID":"element-attrdef-datamodelextension-specversion","dfnText":"specVersion","external":false,"refSections":[],"url":"#element-attrdef-datamodelextension-specversion"},
 "element-attrdef-dataqualityindicators-geographicaldqr": {"dfnID":"element-attrdef-dataqualityindicators-geographicaldqr","dfnText":"geographicalDQR","external":false,"refSections":[],"url":"#element-attrdef-dataqualityindicators-geographicaldqr"},
 "element-attrdef-dataqualityindicators-technologicaldqr": {"dfnID":"element-attrdef-dataqualityindicators-technologicaldqr","dfnText":"technologicalDQR","external":false,"refSections":[],"url":"#element-attrdef-dataqualityindicators-technologicaldqr"},
 "element-attrdef-dataqualityindicators-temporaldqr": {"dfnID":"element-attrdef-dataqualityindicators-temporaldqr","dfnText":"temporalDQR","external":false,"refSections":[],"url":"#element-attrdef-dataqualityindicators-temporaldqr"},
@@ -6135,7 +6154,7 @@ let dfnPanelData = {
 "elementdef-datamodelextension": {"dfnID":"elementdef-datamodelextension","dfnText":"DataModelExtension","external":false,"refSections":[{"refs":[{"id":"ref-for-elementdef-datamodelextension"}],"title":"4.1. Introduction"},{"refs":[{"id":"ref-for-elementdef-datamodelextension\u2460"},{"id":"ref-for-elementdef-datamodelextension\u2461"}],"title":"4.6.1. Properties"}],"url":"#elementdef-datamodelextension"},
 "elementdef-dataqualityindicators": {"dfnID":"elementdef-dataqualityindicators","dfnText":"DataQualityIndicators","external":false,"refSections":[{"refs":[{"id":"ref-for-elementdef-dataqualityindicators"}],"title":"4.7.2. Properties"},{"refs":[{"id":"ref-for-elementdef-dataqualityindicators\u2460"}],"title":"Version 2.2.1 (June 24, 2024)"},{"refs":[{"id":"ref-for-elementdef-dataqualityindicators\u2461"}],"title":"Version 2.0.0 (Feb 20, 2023)"},{"refs":[{"id":"ref-for-elementdef-dataqualityindicators\u2462"}],"title":"Data Model Changes"}],"url":"#elementdef-dataqualityindicators"},
 "elementdef-emissionfactorsource": {"dfnID":"elementdef-emissionfactorsource","dfnText":"EmissionFactorSource","external":false,"refSections":[{"refs":[{"id":"ref-for-elementdef-emissionfactorsource"}],"title":"4.7.2. Properties"}],"url":"#elementdef-emissionfactorsource"},
-"elementdef-error": {"dfnID":"elementdef-error","dfnText":"Error","external":false,"refSections":[{"refs":[{"id":"ref-for-elementdef-error"}],"title":"5.4. Error Handling"},{"refs":[{"id":"ref-for-elementdef-error\u2460"},{"id":"ref-for-elementdef-error\u2461"},{"id":"ref-for-elementdef-error\u2462"},{"id":"ref-for-elementdef-error\u2463"}],"title":"5.6.4. Responses"},{"refs":[{"id":"ref-for-elementdef-error\u2464"},{"id":"ref-for-elementdef-error\u2465"},{"id":"ref-for-elementdef-error\u2466"},{"id":"ref-for-elementdef-error\u2467"},{"id":"ref-for-elementdef-error\u2468"}],"title":"5.7.2. Responses"},{"refs":[{"id":"ref-for-elementdef-error\u2460\u24ea"}],"title":"5.8.3. Request Rejected Event"},{"refs":[{"id":"ref-for-elementdef-error\u2460\u2460"},{"id":"ref-for-elementdef-error\u2460\u2461"},{"id":"ref-for-elementdef-error\u2460\u2462"},{"id":"ref-for-elementdef-error\u2460\u2463"}],"title":"5.8.5. Responses"}],"url":"#elementdef-error"},
+"elementdef-error": {"dfnID":"elementdef-error","dfnText":"Error","external":false,"refSections":[{"refs":[{"id":"ref-for-elementdef-error"},{"id":"ref-for-elementdef-error\u2460"}],"title":"5.4. Error Handling"},{"refs":[{"id":"ref-for-elementdef-error\u2461"},{"id":"ref-for-elementdef-error\u2462"},{"id":"ref-for-elementdef-error\u2463"},{"id":"ref-for-elementdef-error\u2464"}],"title":"5.6.4. Responses"},{"refs":[{"id":"ref-for-elementdef-error\u2465"},{"id":"ref-for-elementdef-error\u2466"},{"id":"ref-for-elementdef-error\u2467"},{"id":"ref-for-elementdef-error\u2468"},{"id":"ref-for-elementdef-error\u2460\u24ea"}],"title":"5.7.2. Responses"},{"refs":[{"id":"ref-for-elementdef-error\u2460\u2460"}],"title":"5.8.3. Request Rejected Event"},{"refs":[{"id":"ref-for-elementdef-error\u2460\u2461"},{"id":"ref-for-elementdef-error\u2460\u2462"},{"id":"ref-for-elementdef-error\u2460\u2463"},{"id":"ref-for-elementdef-error\u2460\u2464"}],"title":"5.8.5. Responses"}],"url":"#elementdef-error"},
 "elementdef-productfootprint": {"dfnID":"elementdef-productfootprint","dfnText":"ProductFootprint","external":false,"refSections":[{"refs":[{"id":"ref-for-elementdef-productfootprint"}],"title":"2. Terminology"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2460"},{"id":"ref-for-elementdef-productfootprint\u2461"}],"title":"4.1. Introduction"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2462"}],"title":"4.6. ProductFootprint"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2463"},{"id":"ref-for-elementdef-productfootprint\u2464"}],"title":"5.6.4. Responses"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2465"},{"id":"ref-for-elementdef-productfootprint\u2466"}],"title":"5.7.2. Responses"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2467"}],"title":"5.8.2. Request Fulfilled Event"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2468"}],"title":"6.1.1. Getting a single PCF"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2460\u24ea"}],"title":"6.1.2. Getting multiple PCFs"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2460\u2460"},{"id":"ref-for-elementdef-productfootprint\u2460\u2461"}],"title":"7.1. Introduction"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2460\u2462"},{"id":"ref-for-elementdef-productfootprint\u2460\u2463"},{"id":"ref-for-elementdef-productfootprint\u2460\u2464"}],"title":"7.2. Change Definition and Handling"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2460\u2465"}],"title":"7.2.3. Obsolete Properties"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2460\u2466"}],"title":"8.1.1. Examples"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2460\u2467"}],"title":"Version 2.0.0 (Feb 20, 2023)"},{"refs":[{"id":"ref-for-elementdef-productfootprint\u2460\u2468"}],"title":"Data Model Changes"}],"url":"#elementdef-productfootprint"},
 "elementdef-productorsectorspecificrule": {"dfnID":"elementdef-productorsectorspecificrule","dfnText":"ProductOrSectorSpecificRule","external":false,"refSections":[{"refs":[{"id":"ref-for-elementdef-productorsectorspecificrule"}],"title":"4.7.2. Properties"}],"url":"#elementdef-productorsectorspecificrule"},
 "elementdef-verification": {"dfnID":"elementdef-verification","dfnText":"Verification","external":false,"refSections":[{"refs":[{"id":"ref-for-elementdef-verification"},{"id":"ref-for-elementdef-verification\u2460"}],"title":"4.7.2. Properties"}],"url":"#elementdef-verification"},
